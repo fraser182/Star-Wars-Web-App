@@ -20,26 +20,35 @@
 
     <a class="navbar-brand"><img src="./css/images/characters/r2d2/r2d2_icon.png">Beep Boop!</a>
 
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav mr-auto">
+    <a href="" class="navbar-brand">Home</a>
 
-        <a href="#" class="nav-link">Home</a>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownExplore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Explore
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownExplore">
+        <a class="dropdown-item" href="#">Characters</a>
+        <a class="dropdown-item" href="#">Planets</a>
+        <a class="dropdown-item" href="#">Vehicles</a>
+        <a class="dropdown-item" href="#">Spaceships</a>
+      </div>
+    </div>
 
-        <li class="nav-item dropdown">
-          <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown">Explore</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a href="#" class="dropdown-item">Characters</a>
-            <a href="#" class="dropdown-item">Planets</a>
-            <a href="#" class="dropdown-item">Vehicles</a>
-            <a href="#" class="dropdown-item">Spaceships</a>
-          </div>
-        </li>
-
-      </ul>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownQuiz" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Quizzes
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownQuiz">
+        <a class="dropdown-item" href="#">General Quiz</a>
+        <a class="dropdown-item" href="#">Character Quiz</a>
+        <a class="dropdown-item" href="#">Whose Side are you on? Quiz</a>
+      </div>
     </div>
 
   </nav>
 
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap.native@2.0.15/dist/bootstrap-native-v4.min.js"></script>
 </body>
 
 </html>
