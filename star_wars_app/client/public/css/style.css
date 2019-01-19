@@ -1,3 +1,8 @@
+/* body */
+body {
+  background-image: url('./images/space/hyperspace.jpg');
+}
+
 /* fonts */
 
 @font-face {
@@ -6,8 +11,7 @@
 }
 
 /* header */
-
-.pb-2 {
+#header {
   font-family: 'Starjout', sans-serif;
   text-align: center;
   color: #ffd700;
@@ -41,6 +45,14 @@
   color: #ffd700;
 }
 
+#dropdownExplore {
+  background-color: black;
+}
+
+#dropdownQuiz {
+  background-color: black;
+}
+
 /* modal */
 .modal-title {
   color: #ffd700;
@@ -57,4 +69,9 @@
 
 .modal-footer {
   background-color: black;
+}
+
+/* Carousel */
+.carouse-indicators {
+  position: fixed;
 }
