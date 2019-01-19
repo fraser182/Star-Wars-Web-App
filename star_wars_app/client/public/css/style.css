@@ -67,8 +67,17 @@ body {
   background-color: black;
 }
 
+.modal-header button {
+  color: #ffd700;
+}
+
 .modal-footer {
   background-color: black;
+}
+
+.modal-footer button {
+  background-color: #ffd700;
+  color: black;
 }
 
 /* Carousel */
