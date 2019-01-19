@@ -1,0 +1,27 @@
+/* fonts */
+
+@font-face {
+  font-family: "Starjout";
+  src: url('./fonts/star_jedi/starjout/Starjout.ttf');
+}
+
+/* header */
+
+.pb-2 {
+  font-family: 'Starjout', sans-serif;
+  text-align: center;
+  color: #ffd700;
+  background: black;
+}
+
+/* navbar */
+
+.navbar-brand {
+  color: #ffd700;
+}
+
+.navbar-brand img {
+  position: relative;
+  background: url(./images/characters/r2d2/r2d2_icon.png);
+  width: 50px;
+}
