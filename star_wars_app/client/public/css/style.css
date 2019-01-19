@@ -36,3 +36,25 @@
 .dropdown {
   margin-right: 20px;
 }
+
+.dropdown button {
+  color: #ffd700;
+}
+
+/* modal */
+.modal-title {
+  color: #ffd700;
+}
+
+.modal-body {
+  color: #ffd700;
+  background-color: black;
+}
+
+.modal-header {
+  background-color: black;
+}
+
+.modal-footer {
+  background-color: black;
+}
