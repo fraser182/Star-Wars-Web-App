@@ -5,13 +5,6 @@ const Planets = function(){
   this.planets = [];
 };
 
-Planets.prototype.bindEvents = function(){
-  PubSub.subscribe('ButtonView:button-selected', (evt) => {
-    const planetsClicked = evt.detail;
-    PubSub.publish('Planets:selected-planets-ready', planetsClicked);
-  });
-}
-
 Planets.prototype.getData = function(){
   const request1 = new Request('https://swapi.co/api/planets/');
   request1.get().then((data1) => {

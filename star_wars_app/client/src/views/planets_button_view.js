@@ -7,12 +7,10 @@ const ButtonView = function(element){
 ButtonView.prototype.bindEvents = function(){
   PubSub.subscribe('Planets:planets-loaded', (evt) => {
     const planets = evt.detail;
-    console.log(evt.detail);
-  });
-
-  this.element.addEventListener('click', (evt) => {
-    const clickedButton = evt.target.id;
-    PubSub.publish('ButtonView:button-selected', clickedButton);
+    this.element.addEventListener('click', (evt) => {
+      PubSub.publish('ButtonView:button-selected', planets);
+      console.log('button working:', planets);
+    });
   });
 }
 
