@@ -16,20 +16,28 @@
     <h1 class="pb-2 mt-4 mb-2 border-bottom">Star Wars World</h1>
   </div>
 
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <nav class="navbar navbar-custom navbar-expand-sm">
 
     <a class="navbar-brand"><img src="./css/images/characters/r2d2/r2d2_icon.png">Beep Boop!</a>
 
-    <a href="" class="navbar-brand">Home</a>
-
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item"><a href="" class="nav-link">Characters</a></li>
-        <li class="nav-item"><a href="" class="nav-link">Planets</a></li>
-        <li class="nav-item"><a href="" class="nav-link">Vehicles</a></li>
-        <li class="nav-item"><a href="" class="nav-link">Spaceships</a></li>
+
+        <a href="#" class="nav-link">Home</a>
+
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown">Explore</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a href="#" class="dropdown-item">Characters</a>
+            <a href="#" class="dropdown-item">Planets</a>
+            <a href="#" class="dropdown-item">Vehicles</a>
+            <a href="#" class="dropdown-item">Spaceships</a>
+          </div>
+        </li>
+
       </ul>
     </div>
+
   </nav>
 
 </body>

@@ -16,7 +16,8 @@
 
 /* navbar */
 
-.navbar-brand {
+.navbar-custom {
+  background-color: black !important;
   color: #ffd700;
 }
 
