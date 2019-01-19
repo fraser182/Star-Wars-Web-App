@@ -16,6 +16,10 @@
 
 /* navbar */
 
+.navbar-brand {
+  color: #ffd700;
+}
+
 .navbar-custom {
   background-color: black !important;
   color: #ffd700;
@@ -25,4 +29,10 @@
   position: relative;
   background: url(./images/characters/r2d2/r2d2_icon.png);
   width: 50px;
+}
+
+/* navbar dropdowns */
+
+.dropdown {
+  margin-right: 20px;
 }
