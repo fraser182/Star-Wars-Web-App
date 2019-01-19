@@ -7,6 +7,7 @@ const ButtonView = function(element){
 ButtonView.prototype.bindEvents = function(){
   PubSub.subscribe('Planets:planets-loaded', (evt) => {
     const planets = evt.detail;
+    console.log(evt.detail);
   });
 
   this.element.addEventListener('click', (evt) => {

@@ -1,6 +1,6 @@
 const Planets = require('./models/planets.js');
 const ButtonView = require('./views/planets_button_view.js');
-const PlanetsInfoView = require('./views/planet_detail_view.js');
+const PlanetInfoView = require('./views/planet_detail_view.js');
 
 
 document.addEventListener('DOMContentLoaded', function(){

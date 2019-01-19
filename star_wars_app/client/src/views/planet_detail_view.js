@@ -11,7 +11,7 @@ PlanetInfoView.prototype.bindEvents = function(){
   });
 }
 
-PlanetsInfoView.prototype.render = function(planet){
+PlanetInfoView.prototype.render = function(planet){
   this.container.innerHTML = '';
 
   const heading = this.createHeading(planet);
@@ -19,7 +19,7 @@ PlanetsInfoView.prototype.render = function(planet){
   this.container.appendChild(heading);
 };
 
-PlanetsInfoView.prototype.createHeading = function(planet){
+PlanetInfoView.prototype.createHeading = function(planet){
   const heading = document.createElement('h2');
   heading.textContent = planet;
   return heading;
