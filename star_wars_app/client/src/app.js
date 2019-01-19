@@ -1,19 +1,18 @@
 const Planets = require('./models/planets.js');
-const ButtonView = require('./views/planets_button_view.js');
-const PlanetDetailView = require('./views/planet_detail_view.js');
-const PlanetListView = require('./views/planet_list_view.js');
+const PlanetsButtonView = require('./views/planets_button_view.js');
+const PlanetsListView = require('./views/planets_list_view.js');
 
 
 document.addEventListener('DOMContentLoaded', function(){
   console.log('Javascript Loaded');
 
-  const container = document.querySelector('#planet');
-  const planetListview = new PlanetListView(container);
-  planetListview.bindEvents();
+  const container = document.querySelector('#main-info-container');
+  const planetsListview = new PlanetsListView(container);
+  planetsListview.bindEvents();
 
   const buttonElement = document.querySelector('#planets');
-  const buttonView = new ButtonView(buttonElement);
-  buttonView.bindEvents();
+  const planetsButtonView = new PlanetsButtonView(buttonElement);
+  planetsButtonView.bindEvents();
 
   const planets = new Planets();
   planets.getData();
