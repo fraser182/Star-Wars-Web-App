@@ -9,7 +9,7 @@ const VehiclesListView = function(container){
 VehiclesListView.prototype.bindEvents = function(){
   PubSub.subscribe('VehiclesButtonView:button-selected', (evt) => {
     this.container.innerHTML= '';
-    console.log('Vehicles List Working:', evt.detail);
+    // console.log('Vehicles List Working:', evt.detail);
     this.render(evt.detail)
   });
 }

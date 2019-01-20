@@ -9,7 +9,7 @@ const CharactersListView = function(container){
 CharactersListView.prototype.bindEvents = function(){
   PubSub.subscribe('CharactersButtonView:button-selected', (evt) => {
     this.container.innerHTML= '';
-    console.log('Characters List Working:', evt.detail);
+    // console.log('Characters List Working:', evt.detail);
     this.render(evt.detail)
   });
 }

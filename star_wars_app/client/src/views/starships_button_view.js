@@ -9,7 +9,7 @@ StarshipsButtonView.prototype.bindEvents = function(){
     const starships = evt.detail;
     this.element.addEventListener('click', (evt) => {
       PubSub.publish('StarshipsButtonView:button-selected', starships);
-      console.log('Starships Button Working:', starships);
+      // console.log('Starships Button Working:', starships);
     });
   });
 }
