@@ -9,7 +9,7 @@ CharactersButtonView.prototype.bindEvents = function(){
     const characters = evt.detail;
     this.element.addEventListener('click', (evt) => {
       PubSub.publish('CharactersButtonView:button-selected', characters);
-      console.log('Character Button Working:', characters);
+      // console.log('Character Button Working:', characters);
     });
   });
 }

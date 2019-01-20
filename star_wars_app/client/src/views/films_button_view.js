@@ -9,7 +9,7 @@ FilmsButtonView.prototype.bindEvents = function(){
     const films = evt.detail;
     this.element.addEventListener('click', (evt) => {
       PubSub.publish('FilmsButtonView:button-selected', films);
-      console.log('Films Button Working:', films);
+      // console.log('Films Button Working:', films);
     });
   });
 }
