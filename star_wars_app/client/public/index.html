@@ -19,85 +19,87 @@
   </div>
 
   <!--Navbar-->
-  <div><nav class="navbar navbar-custom navbar-expand-sm">
+  <div>
+    <nav class="navbar navbar-custom navbar-expand-sm">
 
-    <!--R2D2-->
-    <a class="navbar-brand"><img src="./css/images/characters/r2d2/r2d2_icon.png">
-      <!--modal button-->
-      <button type="button" class="btn btn-primary modal-clickme" data-toggle="modal" data-target="#r2d2Modal">
-        Click me!
-      </button>
-    </a>
+      <!--R2D2-->
+      <a class="navbar-brand"><img src="./css/images/characters/r2d2/r2d2_icon.png">
+        <!--modal button-->
+        <button type="button" class="btn btn-primary modal-clickme" data-toggle="modal" data-target="#r2d2Modal">
+          Click me!
+        </button>
+      </a>
 
-    <!--modal-->
-    <div class="modal fade" id="r2d2Modal" tabindex="-1" role="dialog" aria-labelledby="r2d2modalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="r2d2modalLabel">Welcome!</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            Bleep-Bloop-Boop-Beep...<br>
-            <br>
-            Hello, fellow traveller, my name is R2-D2 and welcome to the Star Wars Universe, see something that takes your fancy? Well, have a nosey around, we have quizzes, games, information and much more!<br>
-            <br>
-            If you see any Sith Lords around, make sure to tell me as soon as possible but don't tell c-3PO...<br>
-            <br>
-            Safe journies, traveller!
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <!--modal-->
+      <div class="modal fade" id="r2d2Modal" tabindex="-1" role="dialog" aria-labelledby="r2d2modalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="r2d2modalLabel">Welcome!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Bleep-Bloop-Boop-Beep...<br>
+              <br>
+              Hello, fellow traveller, my name is R2-D2 and welcome to the Star Wars Universe, see something that takes your fancy? Well, have a nosey around, we have quizzes, games, information and much more!<br>
+              <br>
+              If you see any Sith Lords around, make sure to tell me as soon as possible but don't tell c-3PO...<br>
+              <br>
+              Safe journies, traveller!
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!--Home-->
-    <a href="" class="navbar-brand">Home</a>
+      <!--Home-->
+      <a href="" class="navbar-brand">Home</a>
 
-    <!--Explore-->
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownExplore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Explore
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownExplore">
-        <a id="planets" class="dropdown-item" href="#">Planets</a>
-        <a id="characters" class="dropdown-item" href="#">Characters</a>
-        <a id="films" class="dropdown-item" href="#">Films</a>
-        <a id="vehicles" class="dropdown-item" href="#">Vehicles</a>
-        <a id="starships" class="dropdown-item" href="#">Starships</a>
+      <!--Explore-->
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownExplore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Explore
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownExplore">
+          <a id="planets" class="dropdown-item" href="#">Planets</a>
+          <a id="characters" class="dropdown-item" href="#">Characters</a>
+          <a id="films" class="dropdown-item" href="#">Films</a>
+          <a id="vehicles" class="dropdown-item" href="#">Vehicles</a>
+          <a id="starships" class="dropdown-item" href="#">Starships</a>
+        </div>
       </div>
-    </div>
 
-    <!--Quizzes-->
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownQuiz" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Quizzes
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownQuiz">
-        <a class="dropdown-item" href="#">General Quiz</a>
-        <a class="dropdown-item" href="#">Character Quiz</a>
-        <a class="dropdown-item" href="#">Whose Side are you on? Quiz</a>
+      <!--Quizzes-->
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownQuiz" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Quizzes
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownQuiz">
+          <a class="dropdown-item" href="#">General Quiz</a>
+          <a class="dropdown-item" href="#">Character Quiz</a>
+          <a class="dropdown-item" href="#">Whose Side are you on? Quiz</a>
+        </div>
       </div>
+
+      <!--Game-->
+      <a href="" class="navbar-brand">Game</a>
+
+      <!--Shop-->
+      <a href="" class="navbar-brand">Shop</a>
+
     </div>
 
-    <!--Game-->
-    <a href="" class="navbar-brand">Game</a>
+    <!--Main Information Container-->
+    <div id="main-info-container"></div>
 
-    <!--Shop-->
-    <a href="" class="navbar-brand">Shop</a>
+  </nav>
 
-  </div>
-
-  <div id="main-info-container"></div>
-
-</nav>
-
-<!--Native Bootstrap Script-->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap.native@2.0.15/dist/bootstrap-native-v4.min.js"></script>
+  <!--Native Bootstrap Script-->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap.native@2.0.15/dist/bootstrap-native-v4.min.js"></script>
 </body>
 
 </html>

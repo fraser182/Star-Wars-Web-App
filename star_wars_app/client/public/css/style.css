@@ -80,7 +80,7 @@ body {
   color: black;
 }
 
-/* Carousel */
-.carouse-indicators {
-  position: fixed;
+/* Main Info Container */
+#main-info-container {
+  color: #ffd700;
 }
