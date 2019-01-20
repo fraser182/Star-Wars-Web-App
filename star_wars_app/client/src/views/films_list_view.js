@@ -8,6 +8,7 @@ const FilmsListView = function(container){
 
 FilmsListView.prototype.bindEvents = function(){
   PubSub.subscribe('FilmsButtonView:button-selected', (evt) => {
+    this.container.innerHTML= '';
     console.log('Films List Working:', evt.detail);
     this.render(evt.detail)
   });
