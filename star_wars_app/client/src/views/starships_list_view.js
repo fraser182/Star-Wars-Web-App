@@ -8,6 +8,7 @@ const StarshipsListView = function(container){
 
 StarshipsListView.prototype.bindEvents = function(){
   PubSub.subscribe('StarshipsButtonView:button-selected', (evt) => {
+    this.container.innerHTML= '';
     console.log('Starships List Working:', evt.detail);
     this.render(evt.detail)
   });
