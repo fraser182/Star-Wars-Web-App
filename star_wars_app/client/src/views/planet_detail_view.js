@@ -2,7 +2,6 @@ const PlanetDetailView = function(){
 
 };
 
-
 PlanetDetailView.prototype.createPlanetDetail = function(planet){
   const planetDiv = document.createElement('div');
 

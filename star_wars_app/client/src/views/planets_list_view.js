@@ -8,7 +8,7 @@ const PlanetsListView = function(container){
 
 PlanetsListView.prototype.bindEvents = function(){
   PubSub.subscribe('PlanetsButtonView:button-selected', (evt) => {
-    console.log('list working:', evt.detail);
+    console.log('Planets List Working:', evt.detail);
     this.render(evt.detail)
   });
 }
