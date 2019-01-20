@@ -6,31 +6,26 @@ const Starships = function(){
 };
 
 Starships.prototype.getData = function(){
-  const request1 = new Request('https://swapi.co/api/starships/');
-  request1.get().then((starshipsData1) => {
-    this.starships = starshipsData1.results;
-    console.log('getStarshipsData1', starshipsData1.results);
+  const starshipsPage1Request= new Request('https://swapi.co/api/starships/?page=1').get();
+  const starshipsPage2Request= new Request('https://swapi.co/api/starships/?page=2').get();
+  const starshipsPage3Request= new Request('https://swapi.co/api/starships/?page=3').get();
+  const starshipsPage4Request= new Request('https://swapi.co/api/starships/?page=4').get();
 
-    const request2 = new Request('https://swapi.co/api/starships/?page=2');
-    request2.get().then((starshipsData2) => {
-      this.starships = this.starships.concat(starshipsData2.results);
-      console.log('getStarshipsData2', starshipsData2.results);
+  allStarshipRequests = Promise.all([starshipsPage1Request, starshipsPage2Request, starshipsPage3Request, starshipsPage4Request])
 
-      const request3 = new Request('https://swapi.co/api/starships/?page=3');
-      request3.get().then((starshipsData3) => {
-        this.starships = this.starships.concat(starshipsData3.results);
-        console.log('getStarshipsData3', starshipsData3.results);
-
-        const request4 = new Request('https://swapi.co/api/starships/?page=4');
-        request4.get().then((starshipsData4) => {
-          this.starships = this.starships.concat(starshipsData4.results);
-          console.log('getStarshipsData4', starshipsData4.results);
-        }).then(() => {
-          PubSub.publish('Starships:starships-loaded', this.starships);
-        });
-      });
-    });
-  });
+  allStarshipRequests.then (allStarshipsResponses => {
+    // console.log('resolved', allStarshipsRequests);
+    return allStarshipsResponses
+    .flatMap(starshipResponse => starshipResponse.results)
+  })
+  .then(allStarships => {
+    this.starships = allStarships
+    PubSub.publish('Starships:starships-loaded', allStarships);
+    console.log('starships data - done');
+  }).catch(() => {
+    // console.log('error message');
+    // PubSub.publish('Data:data-loading-error');
+  })
 }
 
 module.exports = Starships;

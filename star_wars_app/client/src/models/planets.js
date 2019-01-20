@@ -6,7 +6,7 @@ const Planets = function(){
 };
 
 Planets.prototype.getData = function(){
-  
+
   const planetsPage1Request= new Request('https://swapi.co/api/planets/?page=1').get();
   const planetsPage2Request= new Request('https://swapi.co/api/planets/?page=2').get();
   const planetsPage3Request= new Request('https://swapi.co/api/planets/?page=3').get();
@@ -18,7 +18,7 @@ Planets.prototype.getData = function(){
 
   allPlanetRequests = Promise.all([planetsPage1Request, planetsPage2Request, planetsPage3Request, planetsPage4Request, planetsPage5Request, planetsPage6Request, planetsPage7Request]) // an array of the response data - the json object is inside the promise.
 
-  // allPeopleReponses is an array of  the resolved data
+  // allPlanetReponses is an array of  the resolved data
   // console.log('allPlanetRequests initially pending, then resolved', allPlanetRequests);
   allPlanetRequests.then (allPlanetResponses => {
     // console.log('allPlanetRequests - promise resolved', allPlanetRequests);
@@ -26,7 +26,7 @@ Planets.prototype.getData = function(){
     .flatMap(planetResponse => planetResponse.results)
   })
   .then(allPlanets => {
-    this.people = allPlanets
+    this.planets = allPlanets
     PubSub.publish('Planets:planets-loaded', allPlanets);
     console.log('planets data - done');
   }).catch(() => {
