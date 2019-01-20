@@ -1,6 +1,14 @@
+/* html */
+html {
+    overflow: hidden;
+    height: 100%;
+}
+
 /* body */
 body {
   background-image: url('./images/space/hyperspace.jpg');
+  height: 100%;
+  overflow: auto;
 }
 
 /* fonts */
