@@ -30,7 +30,7 @@ Planets.prototype.getData = function(){
     console.log('planets data - done');
   }).catch(() => {
     // console.log('error message');
-    // PubSub.publish('People:people-loaded-error');
+    // PubSub.publish('Data:data-loading-error');
   })
 }
 
