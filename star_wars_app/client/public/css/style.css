@@ -1,0 +1,86 @@
+/* body */
+body {
+  background-image: url('./images/space/hyperspace.jpg');
+}
+
+/* fonts */
+
+@font-face {
+  font-family: "Starjout";
+  src: url('./fonts/star_jedi/starjout/Starjout.ttf');
+}
+
+/* header */
+#header {
+  font-family: 'Starjout', sans-serif;
+  text-align: center;
+  color: #ffd700;
+  background: black;
+}
+
+/* navbar */
+
+.navbar-brand {
+  color: #ffd700;
+}
+
+.navbar-custom {
+  background-color: black !important;
+  color: #ffd700;
+}
+
+.navbar-brand img {
+  position: relative;
+  background: url(./images/characters/r2d2/r2d2_icon.png);
+  width: 50px;
+}
+
+/* navbar dropdowns */
+
+.dropdown {
+  margin-right: 20px;
+}
+
+.dropdown button {
+  color: #ffd700;
+}
+
+#dropdownExplore {
+  background-color: black;
+}
+
+#dropdownQuiz {
+  background-color: black;
+}
+
+/* modal */
+.modal-title {
+  color: #ffd700;
+}
+
+.modal-body {
+  color: #ffd700;
+  background-color: black;
+}
+
+.modal-header {
+  background-color: black;
+}
+
+.modal-header button {
+  color: #ffd700;
+}
+
+.modal-footer {
+  background-color: black;
+}
+
+.modal-footer button {
+  background-color: #ffd700;
+  color: black;
+}
+
+/* Carousel */
+.carouse-indicators {
+  position: fixed;
+}
