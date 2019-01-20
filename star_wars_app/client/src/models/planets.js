@@ -6,6 +6,7 @@ const Planets = function(){
 };
 
 Planets.prototype.getData = function(){
+  
   const planetsPage1Request= new Request('https://swapi.co/api/planets/?page=1').get();
   const planetsPage2Request= new Request('https://swapi.co/api/planets/?page=2').get();
   const planetsPage3Request= new Request('https://swapi.co/api/planets/?page=3').get();

@@ -9,7 +9,7 @@ PlanetsButtonView.prototype.bindEvents = function(){
     const planets = evt.detail;
     this.element.addEventListener('click', (evt) => {
       PubSub.publish('PlanetsButtonView:button-selected', planets);
-      console.log('button working:', planets);
+      console.log('Planets Button Working:', planets);
     });
   });
 }
