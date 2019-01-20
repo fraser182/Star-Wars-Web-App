@@ -18,6 +18,11 @@ const Vehicles = require('./models/vehicles.js');
 const VehiclesButtonView = require('./views/vehicles_button_view.js');
 const VehiclesListView = require('./views/vehicles_list_view.js');
 
+// Starships
+const Starships = require('./models/starships.js');
+const StarshipsButtonView = require('./views/starships_button_view.js');
+const StarshipsListView = require('./views/starships_list_view.js');
+
 // DOM
 document.addEventListener('DOMContentLoaded', function(){
   console.log('Javascript Loaded');
@@ -68,4 +73,15 @@ document.addEventListener('DOMContentLoaded', function(){
 
   const vehicles = new Vehicles();
   vehicles.getData();
+
+  // Starships
+  const starshipsListView = new StarshipsListView(container);
+  starshipsListView.bindEvents();
+
+  const starshipButtonElement = document.querySelector('#starships');
+  const starshipsButtonView = new StarshipsButtonView(starshipButtonElement);
+  starshipsButtonView.bindEvents();
+
+  const starships = new Starships();
+  starships.getData();
 });
