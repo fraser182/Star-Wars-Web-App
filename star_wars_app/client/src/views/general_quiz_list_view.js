@@ -9,7 +9,7 @@ const GeneralQuizListView = function(container){
 GeneralQuizListView.prototype.bindEvents = function(){
   PubSub.subscribe('GeneralQuizButtonView:button-selected', (evt) => {
     this.container.innerHTML= '';
-    console.log('GeneralQuiz List Working:', evt.detail);
+    console.log('General Quiz List Working:', evt.detail);
     this.render(evt.detail)
   });
 }

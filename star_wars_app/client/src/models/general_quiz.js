@@ -9,11 +9,11 @@ const GeneralQuiz = function(url){
 GeneralQuiz.prototype.getData = function(){
   const request = new Request(this.url);
   request.get().then((generalQuizData) => {
-    this.generalQuiz = generalQuizData.results;
+    this.generalQuiz = generalQuizData;
   })
   .then(() => {
     PubSub.publish('GeneralQuiz:questions-loaded', this.generalQuiz);
-    console.log('General Quiz Data - Incoming');
+    console.log('General Quiz Data - Incoming', this.generalQuiz);
   });
 }
 
