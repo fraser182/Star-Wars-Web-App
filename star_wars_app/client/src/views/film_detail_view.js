@@ -4,6 +4,13 @@ const FilmDetailView = function(){
 
 FilmDetailView.prototype.createFilmDetail = function(film){
   const filmDiv = document.createElement('div');
+  filmDiv.id = 'film-div'
+
+  const filmImage = document.createElement('img');
+  filmImage.src =`./images/${film.title}.jpg`;
+  filmImage.alt = `${film.title}'s image`;
+  filmImage.id = 'filmImage';
+  filmDiv.appendChild(filmImage);
 
   const header = document.createElement('h1');
   header.textContent = film.title;

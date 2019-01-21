@@ -4,6 +4,13 @@ const CharacterDetailView = function(){
 
 CharacterDetailView.prototype.createCharacterDetail = function(character){
   const characterDiv = document.createElement('div');
+  characterDiv.id = 'character-div'
+
+  const characterImage = document.createElement('img');
+  characterImage.src =`./images/${character.name}.jpg`;
+  characterImage.alt = `${character.name}'s image`;
+  characterImage.id = 'characterImage';
+  characterDiv.appendChild(characterImage);
 
   const header = document.createElement('h1');
   header.textContent = character.name;
