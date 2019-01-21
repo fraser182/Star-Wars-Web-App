@@ -10,14 +10,14 @@ app.use(express.static(publicPath));
 
 app.use(parser.json());
 
-// MongoClient.connect('mongodb://localhost:27017')
-// .then((client) => {
-//   const db = client.db('star_wars_world');
-//   const planetsCollection = db.collection('planets');
-//   const planetsRouter = createRouter(planetsCollection);
-//   app.use('/api/planets', planetsRouter);
-// })
-// .catch(console.error);
+MongoClient.connect('mongodb://localhost:27017')
+.then((client) => {
+  const db = client.db('star_wars_world');
+  const planetsCollection = db.collection('planets_quiz');
+  const planetsRouter = createRouter(planetsCollection);
+  app.use('/api/planets_quiz', planetsQuizRouter);
+})
+.catch(console.error);
 
 app.listen(3000, function(){
   console.log(`Listening on port ${this.address().port}`);

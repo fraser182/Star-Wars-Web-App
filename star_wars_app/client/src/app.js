@@ -23,12 +23,28 @@ const Starships = require('./models/starships.js');
 const StarshipsButtonView = require('./views/starships_button_view.js');
 const StarshipsListView = require('./views/starships_list_view.js');
 
+// Planets Quiz
+const PlanetsQuiz = require('./models/planets_quiz.js');
+const PlanetsQuizButtonView = require('./views/planets_quiz_button_view.js');
+const PlanetsQuizListView = require('./views/planets_quiz_list_view.js');
+
 // DOM
 document.addEventListener('DOMContentLoaded', function(){
   console.log('Javascript Loaded');
 
   // Container
   const container = document.querySelector('#main-info-container');
+
+  // Planets Quiz
+  const planetsQuizListView = new PlanetsQuizListView(container);
+  planetsQuizListView.bindEvents();
+
+  const planetsQuizButtonElement = document.querySelector('#planets_quiz');
+  const planetsQuizButtonView = new PlanetsQuizButtonView(planetsQuizButtonElement);
+  planetsQuizButtonView.bindEvents();
+
+  const planetsQuiz = new PlanetsQuiz();
+  planetsQuiz.getData();
 
   // Planets
   const planetsListview = new PlanetsListView(container);
