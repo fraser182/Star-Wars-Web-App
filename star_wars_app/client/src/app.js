@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function(){
 // Quizzes
 
   // General Quiz
-  const generalQuiz = new GeneralQuiz();
+  const generalQuiz = new GeneralQuiz('http://localhost:3000/api/generalquiz');
   generalQuiz.getData();
 
 });

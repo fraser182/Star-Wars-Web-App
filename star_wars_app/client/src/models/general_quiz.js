@@ -1,8 +1,9 @@
 const PubSub = require('../helpers/pub_sub.js');
 const Request = require('../helpers/request.js');
 
-const GeneralQuizQuestions = function(){
-  this.generalQuizQuestions = [];
+const GeneralQuiz = function(url){
+  this.generalQuiz = [];
+  this.url = url;
 };
 
 GeneralQuiz.prototype.getData = function(){
