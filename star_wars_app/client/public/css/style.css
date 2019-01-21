@@ -1,3 +1,64 @@
+body {
+  background-color: black;
+}
+
 #planetImage {
-  height: 250px;
+  height: 200px;
+  border-radius: 10px;
+
+}
+
+#characterImage {
+  height: 200px;
+}
+
+#filmImage {
+  height: 200px;
+}
+
+#main-info-container {
+  display: flex;
+  padding: 10px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 100px;
+  margin-right: 100px;
+  /* border: 2px solid green; */
+}
+
+
+
+#planet-div {
+
+  /* display: flex;
+  flex-wrap: wrap; */
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  background-color: #ffd700;
+  margin: 5px;
+  border-radius: 10px;
+  /* border: 2px solid green; */
+}
+
+#planet-div h1 {
+color: red;
+}
+
+#character-div {
+
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  width: 300px;
+  /* border: 2px solid green; */
+}
+
+#film-div {
+
+  /* display: flex;
+  flex-wrap: wrap; */
+  justify-content: center;
+  width: 300px;
+  /* border: 2px solid green; */
 }

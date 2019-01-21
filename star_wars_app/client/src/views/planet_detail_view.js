@@ -4,6 +4,7 @@ const PlanetDetailView = function(){
 
 PlanetDetailView.prototype.createPlanetDetail = function(planet){
   const planetDiv = document.createElement('div');
+  planetDiv.id = 'planet-div';
 
   const planetImage = document.createElement('img');
   planetImage.src =`./images/${planet.name}.jpg`;
