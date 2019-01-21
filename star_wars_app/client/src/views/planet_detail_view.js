@@ -5,6 +5,12 @@ const PlanetDetailView = function(){
 PlanetDetailView.prototype.createPlanetDetail = function(planet){
   const planetDiv = document.createElement('div');
 
+  const planetImage = document.createElement('img');
+  planetImage.src =`./images/${planet.name}.jpg`;
+  planetImage.alt = `${planet.name}'s image`;
+  planetImage.id = 'planetImage';
+  planetDiv.appendChild(planetImage);
+
   const header = document.createElement('h1');
   header.textContent = planet.name;
 
