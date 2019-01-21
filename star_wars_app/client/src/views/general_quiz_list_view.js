@@ -15,9 +15,9 @@ GeneralQuizListView.prototype.bindEvents = function(){
 }
 
 GeneralQuizListView.prototype.render = function(generalQuiz){
-  generalQuiz.forEach((generalQuiz) => {
+  generalQuiz.forEach((singleQuestion) => {
     const generalQuizDetail = new GeneralQuizDetailView();
-    const generalQuizDiv = generalQuizDetail.createGeneralQuizDetail(generalQuiz);
+    const generalQuizDiv = generalQuizDetail.createGeneralQuizDetail(singleQuestion);
     this.container.appendChild(generalQuizDiv);
   });
 }
