@@ -10,10 +10,12 @@ body {
 
 #characterImage {
   height: 200px;
+  border-radius: 10px;
 }
 
 #filmImage {
   height: 200px;
+  border-radius: 10px;
 }
 
 #main-info-container {
@@ -43,6 +45,7 @@ body {
 
 #planet-div h1 {
 color: red;
+
 }
 
 #character-div {
@@ -51,6 +54,9 @@ color: red;
   /* flex-wrap: wrap; */
   justify-content: center;
   width: 300px;
+  background-color: #ffd700;
+  margin: 5px;
+  border-radius: 10px;
   /* border: 2px solid green; */
 }
 
@@ -60,5 +66,8 @@ color: red;
   flex-wrap: wrap; */
   justify-content: center;
   width: 300px;
+  background-color: #ffd700;
+  margin: 5px;
+  border-radius: 10px;
   /* border: 2px solid green; */
 }
