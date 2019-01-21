@@ -6,7 +6,7 @@ PlanetDetailView.prototype.createPlanetDetail = function(planet){
   const planetDiv = document.createElement('div');
 
   const planetImage = document.createElement('img');
-  planetImage.src =`"file:///Users/claremcewan/Desktop/codeclan_work/week_8_project/star_wars_group_project/star_wars_app/client/public/images/${planet.name}.jpg"`;
+  planetImage.src =`./images/${planet.name}.jpg`;
   planetImage.alt = `${planet.name}'s image`;
   planetImage.id = 'planetImage';
   planetDiv.appendChild(planetImage);
