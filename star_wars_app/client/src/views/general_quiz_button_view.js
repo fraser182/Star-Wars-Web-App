@@ -1,12 +1,17 @@
 const PubSub = require("../helpers/pub_sub.js");
 
-const generalQuizButtonView = function(element){
+const GeneralQuizButtonView = function(element){
   this.element = element;
 };
 
-generalQuizButtonView.prototype.bindEvents = function(){
-
-  this.element.addEventListener('click', (evt) => {
-    PubSub.publish('generalQuizButtonView:button-selected', )
+GeneralQuizButtonView.prototype.bindEvents = function(){
+  PubSub.subscribe('GeneralQuiz:questions-loaded', (evt) => {
+    const generalQuiz = evt.detail;
+    this.element.addEventListener('click', (evt) => {
+      PubSub.publish('GeneralQuizButtonView:button-selected', generalQuiz);
+      console.log('General Quiz Button Working:', generalQuiz);
+    });
   });
 }
+
+module.exports = GeneralQuizButtonView

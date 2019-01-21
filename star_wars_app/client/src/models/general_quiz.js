@@ -12,8 +12,8 @@ GeneralQuiz.prototype.getData = function(){
     this.generalQuiz = generalQuizData.results;
   })
   .then(() => {
-    PubSub.publish('GeneralQuizQuestions:questions-loaded', this.generalQuiz);
-    console.log('General Quiz Questions Data - Incoming');
+    PubSub.publish('GeneralQuiz:questions-loaded', this.generalQuiz);
+    console.log('General Quiz Data - Incoming');
   });
 }
 

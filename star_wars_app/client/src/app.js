@@ -27,6 +27,8 @@
 // Quizzes
   // General Quiz
   const GeneralQuiz = require('./models/general_quiz.js')
+  const GeneralQuizButtonView = require('./views/general_quiz_button_view.js');
+  const GeneralQuizListView = require('./views/general_quiz_list_view.js');
 
 // DOM
 document.addEventListener('DOMContentLoaded', function(){
@@ -95,6 +97,13 @@ document.addEventListener('DOMContentLoaded', function(){
 // Quizzes
 
   // General Quiz
+  const generalQuizListView = new GeneralQuizListView(container);
+  generalQuizListView.bindEvents();
+
+  const generalQuizButtonElement = document.querySelector('#generalQuiz');
+  const generalQuizButtonView = new GeneralQuizButtonView(generalQuizButtonElement);
+  generalQuizButtonView.bindEvents();
+
   const generalQuiz = new GeneralQuiz('http://localhost:3000/api/generalquiz');
   generalQuiz.getData();
 
