@@ -15,11 +15,29 @@ GeneralQuizListView.prototype.bindEvents = function(){
 }
 
 GeneralQuizListView.prototype.render = function(generalQuiz){
-  generalQuiz.forEach((singleQuestion) => {
+  const form = document.createElement('FORM');
+  const generalQuizDiv = document.createElement('div');
+
+  const allQuizDivs = generalQuiz.map((singleQuestion) => {
     const generalQuizDetail = new GeneralQuizDetailView();
-    const generalQuizDiv = generalQuizDetail.createGeneralQuizDetail(singleQuestion);
-    this.container.appendChild(generalQuizDiv);
+    const quizDiv = generalQuizDetail.createQuizQuestion(singleQuestion, form);
+    return quizDiv;
   });
+
+  allQuizDivs.forEach((quizDiv) => {
+    form.appendChild(quizDiv);
+  })
+
+  const submitButton = document.createElement("input");
+  form.appendChild(submitButton);
+  generalQuizDiv.appendChild(form);
+  submitButton.setAttribute('type',"submit");
+  submitButton.setAttribute('value',"Update");
+  this.container.appendChild(generalQuizDiv);
+
+  // 1. Add an event listener to the form that publishes the submitted data to the model
+  // 2. The model figures out the results and publishes them to a resultview
+  // 3. Resultview displays the results from the model
 }
 
 module.exports = GeneralQuizListView;
