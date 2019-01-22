@@ -11,20 +11,22 @@ GeneralQuizDetailView.prototype.createQuizQuestion = function(singleQuestion, fo
   console.log('Answer', singleQuestion.answers);
   questionDiv.appendChild(header);
 
-  this.createInput('radio', 'Answer 1', singleQuestion.answers.a, questionDiv);
-  this.createInput('radio', 'Answer 2', singleQuestion.answers.b, questionDiv);
-  this.createInput('radio', 'Answer 3', singleQuestion.answers.c, questionDiv);
-  this.createInput('radio', 'Answer 4', singleQuestion.answers.d, questionDiv);
+  this.createInput('radio', singleQuestion.answers.a, questionDiv);
+  this.createInput('radio', singleQuestion.answers.b, questionDiv);
+  this.createInput('radio', singleQuestion.answers.c, questionDiv);
+  this.createInput('radio', singleQuestion.answers.d, questionDiv);
 
   return questionDiv;
 }
 
-GeneralQuizDetailView.prototype.createInput = function (type, name, value, div) {
+GeneralQuizDetailView.prototype.createInput = function (type, value, div) {
   const input = document.createElement("input");
   input.setAttribute('type', type);
-  input.setAttribute('name', name);
   input.setAttribute('value', value);
   input.setAttribute('class', 'radio-buttons');
+  const label = document.createElement('label');
+  label.textContent = value;
+  div.appendChild(label);
   div.appendChild(input);
 }
 

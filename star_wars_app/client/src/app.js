@@ -29,6 +29,7 @@
   const GeneralQuiz = require('./models/general_quiz.js')
   const GeneralQuizButtonView = require('./views/general_quiz_button_view.js');
   const GeneralQuizListView = require('./views/general_quiz_list_view.js');
+  const GeneralQuizResultView = require('./views/general_quiz_result_view.js');
 
 // DOM
 document.addEventListener('DOMContentLoaded', function(){
@@ -97,6 +98,9 @@ document.addEventListener('DOMContentLoaded', function(){
 // Quizzes
 
   // General Quiz
+  const generalQuizResultView = new GeneralQuizResultView();
+  generalQuizResultView.bindEvents();
+
   const generalQuizListView = new GeneralQuizListView(container);
   generalQuizListView.bindEvents();
 

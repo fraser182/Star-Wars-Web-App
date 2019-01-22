@@ -23,23 +23,21 @@ GeneralQuiz.prototype.bindEvents = function(){
     const questionAnswers = this.generalQuiz;
     const answers = evt.detail;
 
+    console.log('answers', answers);
     console.log('hahaha', answers.answerA);
     console.log('hahahaha2', questionAnswers[0].correctAnswer);
 
-    counter = 0
+    let counter = 0
 
-    for (answer in answers) {
-      if (answers.answerA === questionAnswers[0].correctAnswer){
-        counter + 1;
-      }
-      if (answers.answerB === questionAnswers[1].correctAnswer){
-        counter + 1;
-      }
-      if (answers.answerC === questionAnswers[2].correctAnswer){
-        counter + 1;
+    for (question of questionAnswers) {
+      console.log('question', question);
+      console.log('answerA', answers.answerA);
+      if (answers.answerA === question.correctAnswer || answers.answerB === question.correctAnswer || answers.answerC === question.correctAnswer){
+        counter ++;
       }
     };
     console.log('counter', counter);
+    PubSub.publish('ResultView:results-submitted', counter);
   });
 };
 
