@@ -105,6 +105,7 @@ document.addEventListener('DOMContentLoaded', function(){
   generalQuizButtonView.bindEvents();
 
   const generalQuiz = new GeneralQuiz('http://localhost:3000/api/generalquiz');
+  generalQuiz.bindEvents();
   generalQuiz.getData();
 
 });

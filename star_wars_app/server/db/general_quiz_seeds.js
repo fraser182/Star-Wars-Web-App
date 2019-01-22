@@ -10,7 +10,7 @@ db.generalQuiz.insertMany([
       c: "Naboo",
       d: "Yavin"
     },
-    correctAnswer: "a"
+    correctAnswer: "Alderaan"
   },
   {
     question: "Which is the planet for where Jabba the Hutt lived in his palace?",
@@ -20,7 +20,7 @@ db.generalQuiz.insertMany([
       c: "Endor",
       d: "Naboo"
     },
-    correctAnswer: "a"
+    correctAnswer: "Tatoonie"
   },
   {
     question: "Which is the swamp planet where Yoda went into exile after the Great Jedi Purge (Order 66)?",
@@ -30,6 +30,6 @@ db.generalQuiz.insertMany([
       c: "Hoth",
       d: "Dagobah"
     },
-    correctAnswer: "d"
+    correctAnswer: "Dagobah"
   }
 ]);

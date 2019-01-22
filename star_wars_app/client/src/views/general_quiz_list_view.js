@@ -16,6 +16,12 @@ GeneralQuizListView.prototype.bindEvents = function(){
 
 GeneralQuizListView.prototype.render = function(generalQuiz){
   const form = document.createElement('FORM');
+  form.addEventListener('submit', (evt) => {
+    evt.preventDefault();
+    console.log('submitting', evt.target);
+    this.handleSubmit(evt.target);
+  });
+
   const generalQuizDiv = document.createElement('div');
 
   const allQuizDivs = generalQuiz.map((singleQuestion) => {
@@ -38,32 +44,32 @@ GeneralQuizListView.prototype.render = function(generalQuiz){
   // 1. Add an event listener to the form that publishes the submitted data to the model
   // 2. The model figures out the results and publishes them to a resultview
   // 3. Resultview displays the results from the model
-  GeneralQuizListView.prototype.bindEvents = function(){
-    this.form.addEventListener('submit', (evt) => {
-      this.handleSubmit(evt);
-    });
+};
+
+GeneralQuizListView.prototype.handleSubmit = function(form){
+  console.log('in handle submit', form);
+  // evt.target wrong?
+  const allRadioButtons = document.querySelectorAll('.radio-buttons');
+  console.log('allRadioButtons', allRadioButtons);
+
+  const answerArray = [];
+  allRadioButtons.forEach((radioButton) => {
+    if (radioButton.checked){
+      answerArray.push(radioButton.value);
+    }
+  })
+
+  const answerObject = {
+    answerA: answerArray[0],
+    answerB: answerArray[1],
+    answerC: answerArray[2]
   }
 
-  GeneralQuizListView.prototype.handleSubmit = function(evt){
-    evt.preventDefault();
-    // evt.target wrong?
-    const newAnswer = this.createAnswer(evt.target);
-    PubSub.publish('AnswerView:answers-submitted', newAnswer);
-    // evt.target wrong?
-    evt.target.reset();
-  };
+  console.log('answerObject', answerObject);
 
-  GeneralQuizListView.prototype.createAnswer = function(form){
-    const newAnswer = {
-      a: form.a.value,
-      b: form.b.value,
-      c: form.c.value,
-      d: form.d.value
-    };
-    return newAnswer;
-    console.log('new answer:', newAnswer);
-  };
+  PubSub.publish('AnswerView:answers-submitted', answerObject);
 };
+
 
 
 module.exports = GeneralQuizListView;
