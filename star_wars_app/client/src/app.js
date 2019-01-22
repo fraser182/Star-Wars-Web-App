@@ -1,27 +1,35 @@
-// Planets
-const Planets = require('./models/planets.js');
-const PlanetsButtonView = require('./views/planets_button_view.js');
-const PlanetsListView = require('./views/planets_list_view.js');
+// Explore
+  // Planets
+  const Planets = require('./models/planets.js');
+  const PlanetsButtonView = require('./views/planets_button_view.js');
+  const PlanetsListView = require('./views/planets_list_view.js');
 
-// Characters
-const Characters = require('./models/characters.js');
-const CharactersButtonView = require('./views/characters_button_view.js');
-const CharactersListView = require('./views/characters_list_view.js');
+  // Characters
+  const Characters = require('./models/characters.js');
+  const CharactersButtonView = require('./views/characters_button_view.js');
+  const CharactersListView = require('./views/characters_list_view.js');
 
-// Films
-const Films = require('./models/films.js');
-const FilmsButtonView = require('./views/films_button_view.js');
-const FilmsListView = require('./views/films_list_view.js');
+  // Films
+  const Films = require('./models/films.js');
+  const FilmsButtonView = require('./views/films_button_view.js');
+  const FilmsListView = require('./views/films_list_view.js');
 
-// Vehicles
-const Vehicles = require('./models/vehicles.js');
-const VehiclesButtonView = require('./views/vehicles_button_view.js');
-const VehiclesListView = require('./views/vehicles_list_view.js');
+  // Vehicles
+  const Vehicles = require('./models/vehicles.js');
+  const VehiclesButtonView = require('./views/vehicles_button_view.js');
+  const VehiclesListView = require('./views/vehicles_list_view.js');
 
-// Starships
-const Starships = require('./models/starships.js');
-const StarshipsButtonView = require('./views/starships_button_view.js');
-const StarshipsListView = require('./views/starships_list_view.js');
+  // Starships
+  const Starships = require('./models/starships.js');
+  const StarshipsButtonView = require('./views/starships_button_view.js');
+  const StarshipsListView = require('./views/starships_list_view.js');
+
+// Quizzes
+  // General Quiz
+  const GeneralQuiz = require('./models/general_quiz.js')
+  const GeneralQuizButtonView = require('./views/general_quiz_button_view.js');
+  const GeneralQuizListView = require('./views/general_quiz_list_view.js');
+  const GeneralQuizResultView = require('./views/general_quiz_result_view.js');
 
 // DOM
 document.addEventListener('DOMContentLoaded', function(){
@@ -29,6 +37,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
   // Container
   const container = document.querySelector('#main-info-container');
+
+// Explore
 
   // Planets
   const planetsListview = new PlanetsListView(container);
@@ -84,5 +94,23 @@ document.addEventListener('DOMContentLoaded', function(){
 
   const starships = new Starships();
   starships.getData();
+
+
+// Quizzes
+
+  // General Quiz
+  const generalQuizResultView = new GeneralQuizResultView(container);
+  generalQuizResultView.bindEvents();
+
+  const generalQuizListView = new GeneralQuizListView(container);
+  generalQuizListView.bindEvents();
+
+  const generalQuizButtonElement = document.querySelector('#generalQuiz');
+  const generalQuizButtonView = new GeneralQuizButtonView(generalQuizButtonElement);
+  generalQuizButtonView.bindEvents();
+
+  const generalQuiz = new GeneralQuiz('http://localhost:3000/api/generalquiz');
+  generalQuiz.bindEvents();
+  generalQuiz.getData();
 
 });
