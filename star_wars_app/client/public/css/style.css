@@ -1,29 +1,21 @@
-/* html */
-html {
-  overflow: hidden;
-  height: 100%;
-}
 
-/* body */
 body {
-  height: 100%;
-  overflow: auto;
-  background-image: url('./images/space/hyperspace.jpg');
+  background-image: url('../images/space.jpg');
 }
-
-/* fonts */
 
 @font-face {
-  font-family: "Starjout";
-  src: url('./fonts/star_jedi/starjout/Starjout.ttf');
+  font-family: "Stjedise";
+  src: url('./fonts/stjedise/STJEDISE.TTF');
 }
 
-/* header */
+
 #header {
-  font-family: 'Starjout', sans-serif;
+  font-family: 'Stjedise', sans-serif;
   text-align: center;
   color: #ffd700;
-  background: black;
+  /* background: black; */
+  font-size: 100px;
+  padding:10px;
 }
 
 /* navbar */
@@ -33,7 +25,7 @@ body {
 }
 
 .navbar-custom {
-  background-color: black !important;
+  /* background-color: black !important; */
   color: #ffd700;
 }
 
@@ -54,41 +46,113 @@ body {
 }
 
 #dropdownExplore {
-  background-color: black;
+  background-image: url('../images/space.jpg');
+
 }
 
 #dropdownQuiz {
-  background-color: black;
+  background-image: url('../images/space.jpg');
 }
 
-/* modal */
-.modal-title {
-  color: #ffd700;
+#planetImage {
+  width: 300px;
+  border-radius: 10px;
 }
 
-.modal-body {
-  color: #ffd700;
-  background-color: black;
+#characterImage {
+  width: 300px;
+  border-radius: 10px;
 }
 
-.modal-header {
-  background-color: black;
+#filmImage {
+  width: 300px;
+  border-radius: 10px;
 }
 
-.modal-header button {
-  color: #ffd700;
+#vehicleImage {
+  width: 300px;
+  border-radius: 10px;
 }
 
-.modal-footer {
-  background-color: black;
+#starshipImage {
+  width: 300px;
+  border-radius: 10px;
 }
 
-.modal-footer button {
-  background-color: #ffd700;
-  color: black;
-}
-
-/* Main Info Container */
 #main-info-container {
-  color: #ffd700;
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 100px;
+  margin-right: 100px;
+  /* border: 2px solid green; */
+}
+
+
+#planet-div {
+
+  /* display: flex;
+  flex-wrap: wrap; */
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  background-color: #ffd700;
+  margin: 5px;
+  border-radius: 10px;
+  /* border: 2px solid green; */
+}
+
+#planet-div h1 {
+color: black;
+
+}
+
+#character-div {
+
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  width: 300px;
+  background-color: #ffd700;
+  margin: 5px;
+  border-radius: 10px;
+  /* border: 2px solid green; */
+}
+
+#starship-div {
+  justify-content: center;
+  width: 500px;
+  background-color: #ffd700;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+#film-div {
+
+  /* display: flex;
+  flex-wrap: wrap; */
+  justify-content: center;
+  width: 300px;
+  background-color: #ffd700;
+  margin: 5px;
+  border-radius: 10px;
+  /* border: 2px solid green; */
+}
+
+#starship-div {
+  justify-content: center;
+  width: 300px;
+  background-color: #ffd700;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+#vehicle-div {
+  justify-content: center;
+  width: 300px;
+  background-color: #ffd700;
+  margin: 5px;
+  border-radius: 10px;
 }
