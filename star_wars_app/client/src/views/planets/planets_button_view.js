@@ -1,4 +1,4 @@
-const PubSub = require('../helpers/pub_sub.js');
+const PubSub = require('../../helpers/pub_sub.js');
 
 const PlanetsButtonView = function(element){
   this.element = element;

@@ -1,4 +1,4 @@
-const PubSub = require('../helpers/pub_sub.js');
+const PubSub = require('../../helpers/pub_sub.js');
 const StarshipDetailView = require('./starship_detail_view.js');
 const StarshipsButtonView = require('./starships_button_view.js');
 

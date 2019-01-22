@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   background-image: url('../images/space.jpg');
 }
@@ -15,6 +16,34 @@ body {
   /* background: black; */
   font-size: 100px;
   padding:10px;
+=======
+/* html */
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
+/* body */
+body {
+  height: 100%;
+  overflow: auto;
+  background-image: url('./images/space/hyperspace.jpg');
+}
+
+/* fonts */
+
+@font-face {
+  font-family: "Starjout";
+  src: url('./fonts/star_jedi/starjout/Starjout.ttf');
+}
+
+/* header */
+#header {
+  font-family: 'Starjout', sans-serif;
+  text-align: center;
+  color: #ffd700;
+  background: black;
+>>>>>>> quiz/adding_quiz_to_dropdown
 }
 
 /* navbar */
@@ -24,7 +53,11 @@ body {
 }
 
 .navbar-custom {
+<<<<<<< HEAD
   /* background-color: black !important; */
+=======
+  background-color: black !important;
+>>>>>>> quiz/adding_quiz_to_dropdown
   color: #ffd700;
 }
 
@@ -45,6 +78,7 @@ body {
 }
 
 #dropdownExplore {
+<<<<<<< HEAD
   background-image: url('../images/space.jpg');
 
 }
@@ -154,4 +188,43 @@ color: black;
   background-color: #ffd700;
   margin: 5px;
   border-radius: 10px;
+=======
+  background-color: black;
+}
+
+#dropdownQuiz {
+  background-color: black;
+}
+
+/* modal */
+.modal-title {
+  color: #ffd700;
+}
+
+.modal-body {
+  color: #ffd700;
+  background-color: black;
+}
+
+.modal-header {
+  background-color: black;
+}
+
+.modal-header button {
+  color: #ffd700;
+}
+
+.modal-footer {
+  background-color: black;
+}
+
+.modal-footer button {
+  background-color: #ffd700;
+  color: black;
+}
+
+/* Main Info Container */
+#main-info-container {
+  color: #ffd700;
+>>>>>>> quiz/adding_quiz_to_dropdown
 }
