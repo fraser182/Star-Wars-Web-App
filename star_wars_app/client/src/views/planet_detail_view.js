@@ -20,7 +20,7 @@ PlanetDetailView.prototype.createPlanetDetail = function(planet){
   // BUTTON TO SHOW HIDE INFO BELOW
   const button = document.createElement('button');
   button.setAttribute('type','button');
-  button.classList.add('btn', 'btn-info');
+  button.classList.add('btn', 'btn-dark');
   button.textContent = 'more info...';
 
   // Adds a "-" between any whitespace so that the .id doesnt have to deal with any whitespace

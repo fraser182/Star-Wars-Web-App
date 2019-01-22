@@ -7,7 +7,7 @@ VehicleDetailView.prototype.createVehicleDetail = function(vehicle){
   vehicleDiv.id = 'vehicle-div';
 
   const vehicleImage = document.createElement('img');
-  // replace function replaces '/' with a - to manage acccessing the 'TIE/LN starfighter' image 
+  // replace function replaces '/' with a - to manage acccessing the 'TIE/LN starfighter' image
   vehicleImage.src =`./images/${vehicle.name.replace(/\//g, "-")}.jpg`;
   vehicleImage.alt = `${vehicle.name}'s image`;
   vehicleImage.id = 'vehicleImage';
@@ -22,7 +22,7 @@ VehicleDetailView.prototype.createVehicleDetail = function(vehicle){
   // BUTTON TO SHOW HIDE INFO BELOW
   const button = document.createElement('button');
   button.setAttribute('type','button');
-  button.classList.add('btn', 'btn-info');
+  button.classList.add('btn', 'btn-dark');
   button.textContent = 'More Info';
 
 // REPLACE all spaces with "-" and all  "/" with "-"
