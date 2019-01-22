@@ -13,13 +13,14 @@ GeneralQuizResultView.prototype.bindEvents = function(){
 }
 
 GeneralQuizResultView.prototype.render = function(count){
+  this.container.innerHTML = '';
   const resultDiv = document.createElement('div')
 
   const header = document.createElement('h3');
   header.textContent = count;
   resultDiv.appendChild(header);
 
-  return resultDiv;
+  this.container.appendChild(resultDiv);
 }
 
 module.exports = GeneralQuizResultView;

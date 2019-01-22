@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function(){
 // Quizzes
 
   // General Quiz
-  const generalQuizResultView = new GeneralQuizResultView();
+  const generalQuizResultView = new GeneralQuizResultView(container);
   generalQuizResultView.bindEvents();
 
   const generalQuizListView = new GeneralQuizListView(container);
