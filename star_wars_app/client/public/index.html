@@ -1,22 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="./js/bundle.js"></script>
+<!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <title>Star Wars World</title>
 </head>
 
 <body>
+  <div class="container">
+<h1 class="pb-2 mt-4 mb-2" id="header">Star Wars World</h1>
+</div>
 
-  <button id="planets">Planets</button>
-  <button id="characters">Characters</button>
-  <button id="films">Films</button>
-  <button id="vehicles">Vehicles</button>
-  <button id="starships">Starships</button>
-  <div id="main-info-container"></div>
+<!--Navbar-->
+<div>
+  <nav class="navbar navbar-custom navbar-expand-sm">
+
+    <!--Home-->
+        <a href="" class="navbar-brand">Home</a>
+
+        <!--Explore-->
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownExplore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Explore
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownExplore">
+            <a id="planets" class="dropdown-item" href="#">Planets</a>
+            <a id="characters" class="dropdown-item" href="#">Characters</a>
+            <a id="films" class="dropdown-item" href="#">Films</a>
+            <a id="vehicles" class="dropdown-item" href="#">Vehicles</a>
+            <a id="starships" class="dropdown-item" href="#">Starships</a>
+          </div>
+        </div>
+
+        <!--Quizzes-->
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownQuiz" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Quizzes
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownQuiz">
+            <a id="generalQuiz" class="dropdown-item" href="#">General Quiz</a>
+            <a class="dropdown-item" href="#">Character Quiz</a>
+            <a class="dropdown-item" href="#">Whose Side are you on? Quiz</a>
+          </div>
+        </div>
+      </div>
+
+            <!--Main Information Container-->
+      <div id="main-info-container"></div>
+
+  </nav>
+
+
+
+  <!-- Optional JavaScript -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap.native@2.0.15/dist/bootstrap-native-v4.min.js"></script>
+
+  
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
 </body>
 
