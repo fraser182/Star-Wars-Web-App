@@ -84,4 +84,5 @@ document.addEventListener('DOMContentLoaded', function(){
 
   const starships = new Starships();
   starships.getData();
+
 });
