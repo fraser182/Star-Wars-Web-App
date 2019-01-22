@@ -5,6 +5,14 @@ const StarshipDetailView = function(){
 StarshipDetailView.prototype.createStarshipDetail = function(starship){
   const starshipDiv = document.createElement('div');
 
+  starshipDiv.id = 'starship-div'
+
+  const starshipImage = document.createElement('img');
+  starshipImage.src =`./images/${starship.name}.jpg`;
+  starshipImage.alt = `${starship.name}'s image`;
+  starshipImage.id = 'starshipImage';
+  starshipDiv.appendChild(starshipImage);
+
   const header = document.createElement('h1');
   header.textContent = starship.name;
 

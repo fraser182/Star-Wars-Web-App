@@ -1,20 +1,29 @@
 body {
-  background-color: black;
+  background-image: url('../images/space.jpg');
 }
 
 #planetImage {
-  height: 200px;
+  width: 300px;
   border-radius: 10px;
-
 }
 
 #characterImage {
-  height: 200px;
+  width: 300px;
   border-radius: 10px;
 }
 
 #filmImage {
-  height: 200px;
+  width: 300px;
+  border-radius: 10px;
+}
+
+#vehicleImage {
+  width: 300px;
+  border-radius: 10px;
+}
+
+#starshipImage {
+  width: 300px;
   border-radius: 10px;
 }
 
@@ -27,7 +36,6 @@ body {
   margin-right: 100px;
   /* border: 2px solid green; */
 }
-
 
 
 #planet-div {
@@ -44,7 +52,7 @@ body {
 }
 
 #planet-div h1 {
-color: red;
+color: black;
 
 }
 
@@ -60,6 +68,14 @@ color: red;
   /* border: 2px solid green; */
 }
 
+#starship-div {
+  justify-content: center;
+  width: 500px;
+  background-color: #ffd700;
+  margin: 5px;
+  border-radius: 10px;
+}
+
 #film-div {
 
   /* display: flex;
@@ -70,4 +86,21 @@ color: red;
   margin: 5px;
   border-radius: 10px;
   /* border: 2px solid green; */
+}
+
+#starship-div {
+  justify-content: center;
+  width: 300px;
+  background-color: #ffd700;
+  margin: 5px;
+  border-radius: 10px;
+
+}
+
+#vehicle-div {
+  justify-content: center;
+  width: 300px;
+  background-color: #ffd700;
+  margin: 5px;
+  border-radius: 10px;
 }

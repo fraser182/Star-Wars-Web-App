@@ -4,6 +4,13 @@ const VehicleDetailView = function(){
 
 VehicleDetailView.prototype.createVehicleDetail = function(vehicle){
   const vehicleDiv = document.createElement('div');
+  vehicleDiv.id = 'vehicle-div';
+
+  const vehicleImage = document.createElement('img');
+  vehicleImage.src =`./images/${vehicle.name}.jpg`;
+  vehicleImage.alt = `${vehicle.name}'s image`;
+  vehicleImage.id = 'vehicleImage';
+  vehicleDiv.appendChild(vehicleImage);
 
 // name string -- The name of this vehicle. The common name, such as "Sand Crawler" or "Speeder bike".
   const header = document.createElement('h1');
