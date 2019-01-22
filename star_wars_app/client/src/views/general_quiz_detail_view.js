@@ -4,6 +4,7 @@ const GeneralQuizDetailView = function(){
 
 GeneralQuizDetailView.prototype.createQuizQuestion = function(singleQuestion, form){
   const questionDiv = document.createElement('div');
+  questionDiv.id = "question-id"
 
   const header = document.createElement('h3');
   header.textContent = singleQuestion.question;
@@ -11,7 +12,7 @@ GeneralQuizDetailView.prototype.createQuizQuestion = function(singleQuestion, fo
   console.log('Answer', singleQuestion.answers);
   questionDiv.appendChild(header);
 
-  this.createInput('radio', singleQuestion.answers.a, questionDiv);
+  this.createInput('radio', `${singleQuestion.answers.a}:`, questionDiv);
   this.createInput('radio', singleQuestion.answers.b, questionDiv);
   this.createInput('radio', singleQuestion.answers.c, questionDiv);
   this.createInput('radio', singleQuestion.answers.d, questionDiv);

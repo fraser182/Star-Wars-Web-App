@@ -21,7 +21,7 @@ PlanetDetailView.prototype.createPlanetDetail = function(planet){
   const button = document.createElement('button');
   button.setAttribute('type','button');
   button.classList.add('btn', 'btn-info');
-  button.textContent = 'More Info';
+  button.textContent = 'more info...';
 
   // Adds a "-" between any whitespace so that the .id doesnt have to deal with any whitespace
   const regex = / /g;
