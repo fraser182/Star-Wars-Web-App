@@ -14,10 +14,10 @@ app.use(parser.json());
 MongoClient.connect('mongodb://localhost:27017')
 .then((client) => {
   const db = client.db('star_wars_world');
-  // General Quiz
-  const generalQuizCollection = db.collection('generalQuiz');
-  const generalQuizRouter = createRouter(generalQuizCollection);
-  app.use('/api/generalquiz', generalQuizRouter);
+  // Planet Quiz
+  const planetQuizCollection = db.collection('planetQuiz');
+  const planetQuizRouter = createRouter(planetQuizCollection);
+  app.use('/api/planetquiz', planetQuizRouter);
 })
 .catch(console.error);
 

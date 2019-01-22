@@ -1,4 +1,4 @@
-const PubSub = require('../helpers/pub_sub.js');
+const PubSub = require('../../helpers/pub_sub.js');
 const CharacterDetailView = require('./character_detail_view.js');
 const CharactersButtonView = require('./characters_button_view.js');
 

@@ -1,26 +1,26 @@
 const PubSub = require('../helpers/pub_sub.js');
 const Request = require('../helpers/request.js');
-const GeneralQuizListView = require('../views/general_quiz_list_view.js');
+const PlanetQuizListView = require('../views/planet_quiz/planets_quiz_list_view.js');
 
-const GeneralQuiz = function(url){
-  this.generalQuiz = [];
+const PlanetQuiz = function(url){
+  this.planetQuiz = [];
   this.url = url;
 };
 
-GeneralQuiz.prototype.getData = function(){
+PlanetQuiz.prototype.getData = function(){
   const request = new Request(this.url);
-  request.get().then((generalQuizData) => {
-    this.generalQuiz = generalQuizData;
+  request.get().then((planetQuizData) => {
+    this.planetQuiz = planetQuizData;
   })
   .then(() => {
-    PubSub.publish('GeneralQuiz:questions-loaded', this.generalQuiz);
-    console.log('General Quiz Data - Incoming', this.generalQuiz);
+    PubSub.publish('PlanetQuiz:questions-loaded', this.planetQuiz);
+    console.log('Planet Quiz Data - Incoming', this.planetQuiz);
   });
 }
 
-GeneralQuiz.prototype.bindEvents = function(){
+PlanetQuiz.prototype.bindEvents = function(){
   PubSub.subscribe('AnswerView:answers-submitted', (evt) => {
-    const questionAnswers = this.generalQuiz;
+    const questionAnswers = this.planetQuiz;
     const answers = evt.detail;
 
     console.log('answers', answers);
@@ -41,4 +41,4 @@ GeneralQuiz.prototype.bindEvents = function(){
   });
 };
 
-module.exports = GeneralQuiz;
+module.exports = PlanetQuiz;

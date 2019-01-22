@@ -1,8 +1,8 @@
-const GeneralQuizDetailView = function(){
+const PlanetQuizDetailView = function(){
 
 }
 
-GeneralQuizDetailView.prototype.createQuizQuestion = function(singleQuestion, form){
+PlanetQuizDetailView.prototype.createQuizQuestion = function(singleQuestion, form){
   const questionDiv = document.createElement('div');
 
   const header = document.createElement('h3');
@@ -19,7 +19,7 @@ GeneralQuizDetailView.prototype.createQuizQuestion = function(singleQuestion, fo
   return questionDiv;
 }
 
-GeneralQuizDetailView.prototype.createInput = function (type, value, div) {
+PlanetQuizDetailView.prototype.createInput = function (type, value, div) {
   const input = document.createElement("input");
   input.setAttribute('type', type);
   input.setAttribute('value', value);
@@ -30,4 +30,4 @@ GeneralQuizDetailView.prototype.createInput = function (type, value, div) {
   div.appendChild(input);
 }
 
-module.exports = GeneralQuizDetailView;
+module.exports = PlanetQuizDetailView;

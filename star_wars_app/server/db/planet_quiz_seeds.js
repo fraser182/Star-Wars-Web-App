@@ -1,7 +1,7 @@
 use star_wars_world;
 db.dropDatabase();
 
-db.generalQuiz.insertMany([
+db.planetQuiz.insertMany([
   {
     question: "What is the home planet for Princess Leia?",
     answers: {

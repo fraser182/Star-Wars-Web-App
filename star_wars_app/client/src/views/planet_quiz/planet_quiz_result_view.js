@@ -1,18 +1,18 @@
-const PubSub = require('../helpers/pub_sub.js');
-const GeneralQuiz = require('../models/general_quiz.js');
+const PubSub = require('../../helpers/pub_sub.js');
+const PlanetQuiz = require('../../models/planet_quiz.js');
 
-const GeneralQuizResultView = function(container){
+const PlanetQuizResultView = function(container){
   this.container = container;
 }
 
-GeneralQuizResultView.prototype.bindEvents = function(){
+PlanetQuizResultView.prototype.bindEvents = function(){
   PubSub.subscribe('ResultView:results-submitted', (evt) => {
     console.log('Counter Result Entering Result View:', evt.detail);
     this.render(evt.detail)
   });
 }
 
-GeneralQuizResultView.prototype.render = function(count){
+PlanetQuizResultView.prototype.render = function(count){
   this.container.innerHTML = '';
   const resultDiv = document.createElement('div')
 
@@ -23,4 +23,4 @@ GeneralQuizResultView.prototype.render = function(count){
   this.container.appendChild(resultDiv);
 }
 
-module.exports = GeneralQuizResultView;
+module.exports = PlanetQuizResultView;

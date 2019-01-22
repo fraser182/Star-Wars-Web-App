@@ -1,20 +1,20 @@
-const PubSub = require('../helpers/pub_sub.js');
-const GeneralQuizDetailView = require('./general_quiz_detail_view.js');
-const GeneralQuizButtonView = require('./general_quiz_button_view.js');
+const PubSub = require('../../helpers/pub_sub.js');
+const PlanetQuizDetailView = require('./planet_quiz_detail_view.js');
+const PlanetQuizButtonView = require('./planets_quiz_button_view.js');
 
-const GeneralQuizListView = function(container){
+const PlanetQuizListView = function(container){
   this.container = container;
 };
 
-GeneralQuizListView.prototype.bindEvents = function(){
-  PubSub.subscribe('GeneralQuizButtonView:button-selected', (evt) => {
+PlanetQuizListView.prototype.bindEvents = function(){
+  PubSub.subscribe('PlanetQuizButtonView:button-selected', (evt) => {
     this.container.innerHTML= '';
-    console.log('General Quiz List Working:', evt.detail);
+    console.log('Planet Quiz List Working:', evt.detail);
     this.render(evt.detail)
   });
 }
 
-GeneralQuizListView.prototype.render = function(generalQuiz){
+PlanetQuizListView.prototype.render = function(planetQuiz){
   const form = document.createElement('FORM');
   form.addEventListener('submit', (evt) => {
     evt.preventDefault();
@@ -22,11 +22,11 @@ GeneralQuizListView.prototype.render = function(generalQuiz){
     this.handleSubmit(evt.target);
   });
 
-  const generalQuizDiv = document.createElement('div');
+  const planetQuizDiv = document.createElement('div');
 
-  const allQuizDivs = generalQuiz.map((singleQuestion) => {
-    const generalQuizDetail = new GeneralQuizDetailView();
-    const quizDiv = generalQuizDetail.createQuizQuestion(singleQuestion, form);
+  const allQuizDivs = planetQuiz.map((singleQuestion) => {
+    const planetQuizDetail = new PlanetQuizDetailView();
+    const quizDiv = planetQuizDetail.createQuizQuestion(singleQuestion, form);
     return quizDiv;
   });
 
@@ -36,17 +36,17 @@ GeneralQuizListView.prototype.render = function(generalQuiz){
 
   const submitButton = document.createElement("input");
   form.appendChild(submitButton);
-  generalQuizDiv.appendChild(form);
+  planetQuizDiv.appendChild(form);
   submitButton.setAttribute('type',"submit");
   submitButton.setAttribute('value',"Update");
-  this.container.appendChild(generalQuizDiv);
+  this.container.appendChild(planetQuizDiv);
 
   // 1. Add an event listener to the form that publishes the submitted data to the model
   // 2. The model figures out the results and publishes them to a resultview
   // 3. Resultview displays the results from the model
 };
 
-GeneralQuizListView.prototype.handleSubmit = function(form){
+PlanetQuizListView.prototype.handleSubmit = function(form){
   console.log('in handle submit', form);
   // evt.target wrong?
   const allRadioButtons = document.querySelectorAll('.radio-buttons');
@@ -72,4 +72,4 @@ GeneralQuizListView.prototype.handleSubmit = function(form){
 
 
 
-module.exports = GeneralQuizListView;
+module.exports = PlanetQuizListView;
