@@ -17,4 +17,10 @@ GeneralQuiz.prototype.getData = function(){
   });
 }
 
+GeneralQuiz.prototype.bindEvents = function(){
+  PubSub.subscribe('AnswerView:answers-submitted', () => {
+    this.postAnswer(evt.detail);
+  });
+}
+
 module.exports = GeneralQuiz;
