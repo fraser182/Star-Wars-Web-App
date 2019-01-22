@@ -18,14 +18,16 @@ body {
 
 }
 
-.btn-info {
+.btn-dark {
   background-color: #ffd700;
   color: black;
   font-weight: bold;
   border-color: #ffd700;
+  width: 100%;
+  display: block;
 }
 
-.btn-info:hover {
+.btn-dark:hover {
   background-image: url('../images/space.jpg');
   color: #ffd700;
   font-weight: bold;
