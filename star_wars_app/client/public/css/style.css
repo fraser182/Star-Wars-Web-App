@@ -2,6 +2,57 @@ body {
   background-image: url('../images/space.jpg');
 }
 
+@font-face {
+  font-family: "Stjedise";
+  src: url('./fonts/stjedise/STJEDISE.TTF');
+}
+
+
+#header {
+  font-family: 'Stjedise', sans-serif;
+  text-align: center;
+  color: #ffd700;
+  /* background: black; */
+  font-size: 100px;
+  padding:10px;
+}
+
+/* navbar */
+
+.navbar-brand {
+  color: #ffd700;
+}
+
+.navbar-custom {
+  /* background-color: black !important; */
+  color: #ffd700;
+}
+
+.navbar-brand img {
+  position: relative;
+  background: url(./images/characters/r2d2/r2d2_icon.png);
+  width: 50px;
+}
+
+/* navbar dropdowns */
+
+.dropdown {
+  margin-right: 20px;
+}
+
+.dropdown button {
+  color: #ffd700;
+}
+
+#dropdownExplore {
+  background-image: url('../images/space.jpg');
+
+}
+
+#dropdownQuiz {
+  background-image: url('../images/space.jpg');
+}
+
 #planetImage {
   width: 300px;
   border-radius: 10px;
@@ -29,7 +80,8 @@ body {
 
 #main-info-container {
   display: flex;
-  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-left: 100px;
@@ -94,7 +146,6 @@ color: black;
   background-color: #ffd700;
   margin: 5px;
   border-radius: 10px;
-
 }
 
 #vehicle-div {

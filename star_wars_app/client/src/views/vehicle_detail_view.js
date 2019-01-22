@@ -7,7 +7,8 @@ VehicleDetailView.prototype.createVehicleDetail = function(vehicle){
   vehicleDiv.id = 'vehicle-div';
 
   const vehicleImage = document.createElement('img');
-  vehicleImage.src =`./images/${vehicle.name}.jpg`;
+  // replace function replaces '/' with a - to manage acccessing the 'TIE/LN starfighter' image 
+  vehicleImage.src =`./images/${vehicle.name.replace(/\//g, "-")}.jpg`;
   vehicleImage.alt = `${vehicle.name}'s image`;
   vehicleImage.id = 'vehicleImage';
   vehicleDiv.appendChild(vehicleImage);
