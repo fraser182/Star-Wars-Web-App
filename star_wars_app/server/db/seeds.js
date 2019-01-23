@@ -36,7 +36,7 @@ db.generalQuiz.insertMany([
 
 db.sideQuiz.insertMany([
   {
-    question: "If someone is charging you what would you do?",
+    question: "If someone is charging at you, what would you do?",
     answers: {
       a: "End them",
       b: "Attack back with force",
