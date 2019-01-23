@@ -17,6 +17,8 @@ body {
   padding: 10px;
 
 }
+/*
+more info... button */
 
 .btn-dark {
   background-color: #ffd700;
@@ -76,10 +78,6 @@ footer p {
 }  */
 
 
-#question-id {
-  color: white;
-}
-
 .navbar-custom {
   /* background-color: black !important; */
   color: #ffd700;
@@ -101,7 +99,18 @@ footer p {
 
 .dropdown {
   margin-right: 20px;
+  color: #ffd700;
 }
+
+.dropdown-menu {
+  /* width: 100%; */
+  background-color: gold;
+  font-weight: bold;
+}
+
+/* .dropdown-menu:hover {
+  font-weight: bold;
+} */
 
 .dropdown button {
   color: #ffd700;
@@ -228,4 +237,10 @@ footer p {
   background-color: #ffd700;
   margin: 5px;
   border-radius: 10px;
+}
+
+/* quiz display */
+
+#question-id {
+  color: white;
 }
