@@ -17,23 +17,29 @@ GeneralQuizResultView.prototype.render = function(count){
   const resultDiv = document.createElement('div')
 
   const header = document.createElement('h3');
-  header.id = "quiz-score"
-  header.textContent = `You got ${count} out of 3`;
+  header.className = "quiz-score"
+
   resultDiv.appendChild(header);
 
   const resultImage = document.createElement('img');
-    if (count == 0) {
-    resultImage.id = "terrible-score";
+    if (count === 0) {
+    header.id = "terrible-score";
+    header.textContent = `The force is not with you: you got ${count} out of 3`;
   }
-    if (count == 1) {
-    resultImage.id = "low-score";
+    if (count === 1) {
+    header.id = "low-score";
+    header.textContent = `You are no Jedi: you got ${count} out of 3`;
   }
-    if (count == 2) {
-    resultImage.id = "good-score";
+    if (count === 2) {
+    header.id = "good-score";
+    header.textContent = `You will never turn to the dark side: you got ${count} out of 3`;
   }
-    if (count == 3) {
-    resultImage.id = "perfect-score";
+    if (count === 3) {
+    header.id = "perfect-score";
+    header.textContent = `You are the Chosen One: you got ${count} out of 3`;
   }
+  console.log('resultImage', resultImage);
+  console.log('resultDiv', resultDiv);
   resultDiv.appendChild(resultImage);
 
   this.container.appendChild(resultDiv);

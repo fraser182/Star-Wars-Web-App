@@ -244,12 +244,17 @@ input {
 #submit-button-quiz {
   margin-top: 17px;
   border-radius: 10px;
+  border-color: #ffd700;
   background-color: black;
   color: #f7cf72;
   padding: 10px;
 }
 
-#quiz-score {
+.radio-buttons{
+  /* display: block; */
+}
+
+.quiz-score {
   color: #ffd700;
   padding-left: 120px;
   padding-right: 120px;
@@ -259,10 +264,12 @@ input {
   width: 100%
   display: block;
   font-family: 'Stjedise', sans-serif;
-  font-size: 100px;
-  background-image: url('../images/dance_2.gif');
+  font-size: 90px;
+  text-align: center;
   /* width: 100%; */
 }
+
+
 
 #terrible-score {
   background-image: url('../images/nae_bad.gif');
