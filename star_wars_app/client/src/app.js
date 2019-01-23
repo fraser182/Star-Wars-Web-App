@@ -34,7 +34,7 @@ const GeneralQuizResultView = require('./views/general_quiz_result_view.js');
 // Charts
 // Planets charts
 const PlanetChartsButtonView = require('./views/planet_charts_button_view.js');
-const PlanetChartsListView = require('./views/planets_charts_list_view.js');
+const PlanetChartsListView = require('./views/planet_charts_list_view.js');
 
 // DOM
 document.addEventListener('DOMContentLoaded', function(){
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
   // Planet charts
 
-  const planetChartsListView = new planetChartsListView(container);
+  const planetChartsListView = new PlanetChartsListView(container);
   planetChartsListView.bindEvents();
 
   const planetChartsButtonElement = document.querySelector('#planetsCharts');

@@ -6,21 +6,18 @@ const PlanetChartsListView = function(container){
   this.container = container;
 };
 
-PlanetsListView.prototype.bindEvents = function(){
-  PubSub.subscribe('PlanetsButtonView:button-selected', (evt) => {
+PlanetChartsListView.prototype.bindEvents = function(){
+  PubSub.subscribe('PlanetChartsButtonView:button-selected', (evt) => {
     this.container.innerHTML= '';
-    // console.log('Planets List Working:', evt.detail);
-    this.render(evt.detail)
+    this.render()
   });
 }
 
-PlanetsListView.prototype.render = function(planets){
-  planets.forEach((planet) => {
-    const planetDetail = new PlanetDetailView();
-    const planetDiv = planetDetail.createPlanetDetail(planet);
-    this.container.appendChild(planetDiv);
-  });
+PlanetChartsListView.prototype.render = function(){
+    // const planetChartsDetail = new PlanetChartsDetailView();
+    // const planetChartsDiv = planetChartsDetail.createPlanetChartsDetail();
+    this.container.appendChild(planetChartsDiv);
 }
 
 
-module.exports = PlanetsListView;
+module.exports = PlanetChartsListView;
