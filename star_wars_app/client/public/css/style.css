@@ -239,6 +239,22 @@ footer p {
 }
 
 
+#secondChart {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  /* margin-right: 100px; */
+  margin-bottom: 20px;
+
+  min-width: 310px;
+  height: 400px;
+  max-width: 800px;
+  /* margin: 0; */
+}
+
+svg.highcharts-root {
+  width:671px;
+}
 
 #question-id {
   color: black;
