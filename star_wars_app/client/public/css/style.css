@@ -252,6 +252,19 @@ footer p {
   /* margin: 0; */
 }
 
+#thirdChart {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  /* margin-right: 100px; */
+  margin-bottom: 20px;
+
+  min-width: 310px;
+  height: 400px;
+  max-width: 800px;
+  /* margin: 0; */
+}
+
 svg.highcharts-root {
   width:671px;
 }
@@ -313,4 +326,3 @@ input {
 
 #perfect-score {
   background-image: url('../images/top_score.gif');
-  
