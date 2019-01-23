@@ -12,10 +12,12 @@ GeneralQuizDetailView.prototype.createQuizQuestion = function(singleQuestion, fo
   console.log('Answer', singleQuestion.answers);
   questionDiv.appendChild(header);
 
-  this.createInput('radio', `${singleQuestion.answers.a}:`, questionDiv);
+
+  this.createInput('radio', singleQuestion.answers.a, questionDiv);
   this.createInput('radio', singleQuestion.answers.b, questionDiv);
   this.createInput('radio', singleQuestion.answers.c, questionDiv);
   this.createInput('radio', singleQuestion.answers.d, questionDiv);
+
 
   return questionDiv;
 }
