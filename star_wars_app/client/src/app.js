@@ -36,6 +36,18 @@ const GeneralQuizResultView = require('./views/general_quiz_result_view.js');
 const PlanetChartsButtonView = require('./views/planet_charts_button_view.js');
 const PlanetChartsListView = require('./views/planet_charts_list_view.js');
 
+  // Character Quiz
+  const CharacterQuiz = require('./models/character_quiz.js')
+  const CharacterQuizButtonView = require('./views/character_quiz_button_view.js');
+  const CharacterQuizListView = require('./views/character_quiz_list_view.js');
+  const CharacterQuizResultView = require('./views/character_quiz_result_view.js');
+
+  // Side Quiz
+  const SideQuiz = require('./models/side_quiz.js')
+  const SideQuizButtonView = require('./views/side_quiz_button_view.js');
+  const SideQuizListView = require('./views/side_quiz_list_view.js');
+  const SideQuizResultView = require('./views/side_quiz_result_view.js');
+
 // DOM
 document.addEventListener('DOMContentLoaded', function(){
   console.log('Javascript Loaded');
@@ -117,6 +129,36 @@ document.addEventListener('DOMContentLoaded', function(){
   const generalQuiz = new GeneralQuiz('http://localhost:3000/api/generalquiz');
   generalQuiz.bindEvents();
   generalQuiz.getData();
+
+  // Character Quiz
+  const characterQuizResultView = new CharacterQuizResultView(container);
+  characterQuizResultView.bindEvents();
+
+  const characterQuizListView = new CharacterQuizListView(container);
+  characterQuizListView.bindEvents();
+
+  const characterQuizButtonElement = document.querySelector('#characterQuiz');
+  const characterQuizButtonView = new CharacterQuizButtonView(characterQuizButtonElement);
+  characterQuizButtonView.bindEvents();
+
+  const characterQuiz = new CharacterQuiz('http://localhost:3000/api/characterquiz');
+  characterQuiz.bindEvents();
+  characterQuiz.getData();
+
+  // Side Quiz
+  const sideQuizResultView = new SideQuizResultView(container);
+  sideQuizResultView.bindEvents();
+
+  const sideQuizListView = new SideQuizListView(container);
+  sideQuizListView.bindEvents();
+
+  const sideQuizButtonElement = document.querySelector('#sideQuiz');
+  const sideQuizButtonView = new SideQuizButtonView(sideQuizButtonElement);
+  sideQuizButtonView.bindEvents();
+
+  const sideQuiz = new SideQuiz('http://localhost:3000/api/sidequiz');
+  sideQuiz.bindEvents();
+  sideQuiz.getData();
 
 
   // Planet charts
