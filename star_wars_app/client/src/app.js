@@ -31,6 +31,12 @@
   const GeneralQuizListView = require('./views/general_quiz_list_view.js');
   const GeneralQuizResultView = require('./views/general_quiz_result_view.js');
 
+  // Character Quiz
+  const CharacterQuiz = require('./models/character_quiz.js')
+  const CharacterQuizButtonView = require('./views/character_quiz_button_view.js');
+  const CharacterQuizListView = require('./views/character_quiz_list_view.js');
+  const CharacterQuizResultView = require('./views/character_quiz_result_view.js');
+
 // DOM
 document.addEventListener('DOMContentLoaded', function(){
   console.log('Javascript Loaded');
@@ -112,5 +118,20 @@ document.addEventListener('DOMContentLoaded', function(){
   const generalQuiz = new GeneralQuiz('http://localhost:3000/api/generalquiz');
   generalQuiz.bindEvents();
   generalQuiz.getData();
+
+  // Character Quiz
+  const characterQuizResultView = new CharacterQuizResultView(container);
+  characterQuizResultView.bindEvents();
+
+  const characterQuizListView = new CharacterQuizListView(container);
+  characterQuizListView.bindEvents();
+
+  const characterQuizButtonElement = document.querySelector('#characterQuiz');
+  const characterQuizButtonView = new CharacterQuizButtonView(characterQuizButtonElement);
+  characterQuizButtonView.bindEvents();
+
+  const characterQuiz = new CharacterQuiz('http://localhost:3000/api/characterquiz');
+  characterQuiz.bindEvents();
+  characterQuiz.getData();
 
 });

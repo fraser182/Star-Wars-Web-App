@@ -18,6 +18,10 @@ MongoClient.connect('mongodb://localhost:27017')
   const generalQuizCollection = db.collection('generalQuiz');
   const generalQuizRouter = createRouter(generalQuizCollection);
   app.use('/api/generalquiz', generalQuizRouter);
+  // Character Quiz
+  const characterQuizCollection = db.collection('characterQuiz');
+  const characterQuizRouter = createRouter(characterQuizCollection);
+  app.use('/api/characterquiz', characterQuizRouter);
 })
 .catch(console.error);
 
