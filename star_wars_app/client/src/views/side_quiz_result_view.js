@@ -23,7 +23,7 @@ SideQuizResultView.prototype.render = function(count){
 
   const resultImage = document.createElement('img');
     if (count === 0) {
-    header.id = "terribl-score";
+    header.id = "terrible-score";
     header.textContent = `JEDI: You are pure and clean like the Jedi, be proud!`;
   }
     if (count === 1) {
