@@ -76,9 +76,6 @@ footer p {
 }  */
 
 
-#question-id {
-  color: white;
-}
 
 .navbar-custom {
   /* background-color: black !important; */
@@ -228,4 +225,26 @@ footer p {
   background-color: #ffd700;
   margin: 5px;
   border-radius: 10px;
+}
+
+
+#question-id {
+  color: black;
+  background-color: #f7cf72;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  font-family: helvetica;
+}
+
+input {
+  width: 80px;
+}
+
+#submit-button-quiz {
+  margin-top: 17px;
+  border-radius: 10px;
+  background-color: black;
+  color: #f7cf72;
+  padding: 10px;
 }
