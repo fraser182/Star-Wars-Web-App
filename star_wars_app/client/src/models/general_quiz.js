@@ -37,6 +37,8 @@ GeneralQuiz.prototype.bindEvents = function(){
       }
     };
     console.log('counter', counter);
+    // construct a new request object with a url that refers to the database
+    // use the requests post method to persist the score to database
     PubSub.publish('ResultView:results-submitted', counter);
   });
 };

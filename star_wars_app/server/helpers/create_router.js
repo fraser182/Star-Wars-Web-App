@@ -17,13 +17,13 @@ const createRouter = function (collection) {
   //   .then((docs) => res.json(docs));
   // });
   //
-  // // CREATE
-  // router.post('/', (req, res) => {
-  //   const newAnswer = req.body;
-  //   collection.insertOne(newAnswer)
-  //   .then(() => collection.find().toArray())
-  //   .then((docs) => res.json(docs));
-  // });
+  // CREATE
+  router.post('/', (req, res) => {
+    const newAnswer = req.body;
+    collection.insertOne(newAnswer)
+    .then(() => collection.find().toArray())
+    .then((docs) => res.json(docs));
+  });
   //
   // // DELETE
   // router.delete('/:id', (req, res) => {
