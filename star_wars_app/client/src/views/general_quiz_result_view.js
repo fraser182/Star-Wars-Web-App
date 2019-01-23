@@ -17,8 +17,24 @@ GeneralQuizResultView.prototype.render = function(count){
   const resultDiv = document.createElement('div')
 
   const header = document.createElement('h3');
-  header.textContent = count;
+  header.id = "quiz-score"
+  header.textContent = `You got ${count} out of 3`;
   resultDiv.appendChild(header);
+
+  const resultImage = document.createElement('img');
+    if (count == 0) {
+    resultImage.id = "terrible-score";
+  }
+    if (count == 1) {
+    resultImage.id = "low-score";
+  }
+    if (count == 2) {
+    resultImage.id = "good-score";
+  }
+    if (count == 3) {
+    resultImage.id = "perfect-score";
+  }
+  resultDiv.appendChild(resultImage);
 
   this.container.appendChild(resultDiv);
 }

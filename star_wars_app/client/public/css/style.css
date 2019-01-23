@@ -248,3 +248,34 @@ input {
   color: #f7cf72;
   padding: 10px;
 }
+
+#quiz-score {
+  color: #ffd700;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 100px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+  align-items: center;
+  font-family: 'Stjedise', sans-serif;
+  font-size: 70px;
+  font-weight: bold;
+  background-image: url('../images/dance_2.gif');
+  /* width: 100%; */
+}
+
+#terrible-score {
+  background-image: url('../images/nae_bad.gif');
+}
+
+#low-score {
+  background-image: url('../images/the_force_is_not_with_you.gif');
+}
+
+#good-score {
+  background-image: url('../images/pretty_good.gif');
+}
+
+#perfect-score {
+  background-image: url('../images/top_score.gif');
+}
