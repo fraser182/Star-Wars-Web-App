@@ -295,6 +295,20 @@ input {
   /* display: block; */
 }
 
+.general-quiz-score {
+  color: #ffd700;
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-top: 120px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+  width: 100%;
+  display: block;
+  font-family: 'Stjedise', sans-serif;
+  font-size: 90px;
+  text-align: center;
+}
+
 .quiz-score {
   color: #ffd700;
   padding-left: 120px;
@@ -310,7 +324,21 @@ input {
   /* width: 100%; */
 }
 
+#bad-score {
+  background-image: url('../images/nae_bad.gif');
+}
 
+#ok-score {
+  background-image: url('../images/the_force_is_not_with_you.gif');
+}
+
+#better-score {
+  background-image: url('../images/pretty_good.gif');
+}
+
+#great-score {
+  background-image: url('../images/top_score.gif');
+}
 
 #terrible-score {
   background-image: url('../images/nae_bad.gif');
@@ -326,3 +354,5 @@ input {
 
 #perfect-score {
   background-image: url('../images/top_score.gif');
+}
+
