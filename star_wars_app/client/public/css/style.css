@@ -251,15 +251,15 @@ input {
 
 #quiz-score {
   color: #ffd700;
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-top: 100px;
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-top: 120px;
   padding-bottom: 10px;
   border-radius: 20px;
-  align-items: center;
+  width: 100%
+  display: block;
   font-family: 'Stjedise', sans-serif;
-  font-size: 70px;
-  font-weight: bold;
+  font-size: 100px;
   background-image: url('../images/dance_2.gif');
   /* width: 100%; */
 }
