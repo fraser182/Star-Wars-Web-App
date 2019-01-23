@@ -37,6 +37,12 @@
   const CharacterQuizListView = require('./views/character_quiz_list_view.js');
   const CharacterQuizResultView = require('./views/character_quiz_result_view.js');
 
+  // Side Quiz
+  const SideQuiz = require('./models/side_quiz.js')
+  const SideQuizButtonView = require('./views/side_quiz_button_view.js');
+  const SideQuizListView = require('./views/side_quiz_list_view.js');
+  const SideQuizResultView = require('./views/side_quiz_result_view.js');
+
 // DOM
 document.addEventListener('DOMContentLoaded', function(){
   console.log('Javascript Loaded');
@@ -133,5 +139,20 @@ document.addEventListener('DOMContentLoaded', function(){
   const characterQuiz = new CharacterQuiz('http://localhost:3000/api/characterquiz');
   characterQuiz.bindEvents();
   characterQuiz.getData();
+
+  // Side Quiz
+  const sideQuizResultView = new SideQuizResultView(container);
+  sideQuizResultView.bindEvents();
+
+  const sideQuizListView = new SideQuizListView(container);
+  sideQuizListView.bindEvents();
+
+  const sideQuizButtonElement = document.querySelector('#sideQuiz');
+  const sideQuizButtonView = new SideQuizButtonView(sideQuizButtonElement);
+  sideQuizButtonView.bindEvents();
+
+  const sideQuiz = new SideQuiz('http://localhost:3000/api/sidequiz');
+  sideQuiz.bindEvents();
+  sideQuiz.getData();
 
 });
