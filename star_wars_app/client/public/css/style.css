@@ -77,7 +77,6 @@ footer p {
 
 }  */
 
-
 .navbar-custom {
   /* background-color: black !important; */
   color: #ffd700;
@@ -239,8 +238,63 @@ footer p {
   border-radius: 10px;
 }
 
-/* quiz display */
+
 
 #question-id {
-  color: white;
+  color: black;
+  background-image: linear-gradient(to right, #f5e3bb, #ffd700);
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  font-family: helvetica;
 }
+
+input {
+  width: 80px;
+}
+
+#submit-button-quiz {
+  margin-top: 17px;
+  border-radius: 10px;
+  border-color: #ffd700;
+  background-color: black;
+  color: #f7cf72;
+  padding: 10px;
+}
+
+.radio-buttons{
+  /* display: block; */
+}
+
+.quiz-score {
+  color: #ffd700;
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-top: 120px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+  width: 100%;
+  display: block;
+  font-family: 'Stjedise', sans-serif;
+  font-size: 90px;
+  text-align: center;
+  /* width: 100%; */
+}
+
+
+
+#terrible-score {
+  background-image: url('../images/nae_bad.gif');
+}
+
+#low-score {
+  background-image: url('../images/the_force_is_not_with_you.gif');
+}
+
+#good-score {
+  background-image: url('../images/pretty_good.gif');
+}
+
+#perfect-score {
+  background-image: url('../images/top_score.gif');
+  

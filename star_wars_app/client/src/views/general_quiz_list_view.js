@@ -37,8 +37,9 @@ GeneralQuizListView.prototype.render = function(generalQuiz){
   const submitButton = document.createElement("input");
   form.appendChild(submitButton);
   generalQuizDiv.appendChild(form);
+  submitButton.id = "submit-button-quiz"
   submitButton.setAttribute('type',"submit");
-  submitButton.setAttribute('value',"Update");
+  submitButton.setAttribute('value',"SEND");
   this.container.appendChild(generalQuizDiv);
 
   // 1. Add an event listener to the form that publishes the submitted data to the model
