@@ -17,6 +17,8 @@ body {
   padding: 10px;
 
 }
+/*
+more info... button */
 
 .btn-dark {
   background-color: #ffd700;
@@ -75,8 +77,6 @@ footer p {
 
 }  */
 
-
-
 .navbar-custom {
   /* background-color: black !important; */
   color: #ffd700;
@@ -98,7 +98,18 @@ footer p {
 
 .dropdown {
   margin-right: 20px;
+  color: #ffd700;
 }
+
+.dropdown-menu {
+  /* width: 100%; */
+  background-color: gold;
+  font-weight: bold;
+}
+
+/* .dropdown-menu:hover {
+  font-weight: bold;
+} */
 
 .dropdown button {
   color: #ffd700;
@@ -228,6 +239,7 @@ footer p {
 }
 
 
+
 #question-id {
   color: black;
   background-image: linear-gradient(to right, #f5e3bb, #ffd700);
@@ -261,7 +273,7 @@ input {
   padding-top: 120px;
   padding-bottom: 10px;
   border-radius: 20px;
-  width: 100%
+  width: 100%;
   display: block;
   font-family: 'Stjedise', sans-serif;
   font-size: 90px;
@@ -285,4 +297,4 @@ input {
 
 #perfect-score {
   background-image: url('../images/top_score.gif');
-}
+  
