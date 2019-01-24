@@ -184,6 +184,17 @@ footer p {
   /* border: 5px solid black; */
 }
 
+.more-info {
+  position: absolute;
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  background-color: rgb(255, 215, 0);
+  border-radius: 0 0 10px 10px;
+  margin: 0px;
+}
+
 /* #planet-div h1 {
   color: black;
   padding-top: 8px;
@@ -355,4 +366,3 @@ input {
 #perfect-score {
   background-image: url('../images/top_score.gif');
 }
-

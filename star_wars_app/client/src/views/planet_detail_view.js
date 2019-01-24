@@ -33,7 +33,7 @@ PlanetDetailView.prototype.createPlanetDetail = function(planet){
 
  const moreInfoDiv = document.createElement('div');
  moreInfoDiv.id = moreInfoDivId // id struggles with whitespace
- moreInfoDiv.classList.add('collapse');
+ moreInfoDiv.classList.add('collapse', 'more-info');
 
  planetDiv.appendChild(moreInfoDiv);
 
