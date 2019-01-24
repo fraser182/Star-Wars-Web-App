@@ -34,7 +34,7 @@ VehicleDetailView.prototype.createVehicleDetail = function(vehicle){
 
   const moreInfoDiv = document.createElement('div');
   moreInfoDiv.id = moreInfoDivId // id struggles with whitespace
-  moreInfoDiv.classList.add('collapse');
+moreInfoDiv.classList.add('collapse', 'more-info');
 
   vehicleDiv.appendChild(moreInfoDiv);
 
@@ -47,54 +47,54 @@ VehicleDetailView.prototype.createVehicleDetail = function(vehicle){
   // model string -- The model or official name of this vehicle. Such as "All-Terrain Attack Transport".
   const modelItem = document.createElement('li');
   modelItem.textContent = `Model: ${vehicle.model}`;
-  moreInfoDiv.appendChild(modelItem);
+  moreInfoList.appendChild(modelItem);
 
   // vehicle_class string -- The class of this vehicle, such as "Wheeled" or "Repulsorcraft".
   const vehicleClassItem = document.createElement('li');
   vehicleClassItem.textContent = `Class: ${vehicle.vehicle_class.charAt(0).toUpperCase()}`+ `${vehicle.vehicle_class.slice(1)}`;
-  moreInfoDiv.appendChild(vehicleClassItem);
+  moreInfoList.appendChild(vehicleClassItem);
 
   // manufacturer string -- The manufacturer of this vehicle. Comma separated if more than one.
   const manufacturerItem = document.createElement('li');
   manufacturerItem.textContent = `Manufacturer: ${vehicle.manufacturer}`;
-  moreInfoDiv.appendChild(manufacturerItem);
+  moreInfoList.appendChild(manufacturerItem);
 
   // length string -- The length of this vehicle in meters.
   const lengthItem = document.createElement('li');
   lengthItem.textContent = `Length: ${vehicle.length} meters`;
-  moreInfoDiv.appendChild(lengthItem);
+  moreInfoList.appendChild(lengthItem);
 
   // cost_in_credits string -- The cost of this vehicle new, in Galactic Credits.
   const costInCreditItem = document.createElement('li');
   costInCreditItem.textContent = `Cost: ${vehicle.cost_in_credits} Galactic Credits`;
-  moreInfoDiv.appendChild(costInCreditItem);
+  moreInfoList.appendChild(costInCreditItem);
 
   // crew string -- The number of personnel needed to run or pilot this vehicle.
   const crewItem = document.createElement('li');
   crewItem.textContent = `Min no. of personnel: ${vehicle.crew}`;
-  moreInfoDiv.appendChild(crewItem);
+  moreInfoList.appendChild(crewItem);
 
   // passengers string -- The number of non-essential people this vehicle can transport.
   const passengersItem = document.createElement('li');
   passengersItem.textContent = `Max no. of non-essential passengers: ${vehicle.passengers}`;
-  moreInfoDiv.appendChild(passengersItem);
+  moreInfoList.appendChild(passengersItem);
 
   // max_atmosphering_speed string -- The maximum speed of this vehicle in the atmosphere.
   const maxAtmosphereItem = document.createElement('li');
   maxAtmosphereItem.textContent = `Max speed: ${vehicle.max_atmosphering_speed}`;
-  moreInfoDiv.appendChild(maxAtmosphereItem);
+  moreInfoList.appendChild(maxAtmosphereItem);
 
   // cargo_capacity string -- The maximum number of kilograms that this vehicle can transport.
   const cargoCapacityItem = document.createElement('li');
   cargoCapacityItem.textContent = `Cargo Capacity: ${vehicle.max_atmosphering_speed} kgs`;
-  moreInfoDiv.appendChild(cargoCapacityItem);
+  moreInfoList.appendChild(cargoCapacityItem);
 
 
   // consumables *string
   // The maximum length of time that this vehicle can provide consumables for its entire crew without having to resupply.
   const consumablesItem = document.createElement('li');
   consumablesItem.textContent = `Max stockpile duration: ${vehicle.consumables}`;
-  moreInfoDiv.appendChild(consumablesItem)
+  moreInfoList.appendChild(consumablesItem)
 
 
   return vehicleDiv;
