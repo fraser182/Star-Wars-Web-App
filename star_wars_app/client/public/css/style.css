@@ -366,3 +366,9 @@ input {
 #perfect-score {
   background-image: url('../images/top_score.gif');
 }
+
+dl, ol, ul {
+
+    margin-right: 1.5rem;
+
+}
