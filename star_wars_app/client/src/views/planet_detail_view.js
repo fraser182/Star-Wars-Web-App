@@ -43,35 +43,35 @@ PlanetDetailView.prototype.createPlanetDetail = function(planet){
 
  const rotationPeriodItem = document.createElement('li');
  rotationPeriodItem.textContent = `Rotation Period: ${planet.rotation_period} standard hours`;
- moreInfoDiv.appendChild(rotationPeriodItem);
+ moreInfoList.appendChild(rotationPeriodItem);
 
  const orbitalPeriodItem = document.createElement('li');
  orbitalPeriodItem.textContent = `Orbital Period: ${planet.orbital_period} standard days`;
- moreInfoDiv.appendChild(orbitalPeriodItem);
+ moreInfoList.appendChild(orbitalPeriodItem);
 
  const diameterItem = document.createElement('li');
  diameterItem.textContent = `Diameter: ${planet.diameter} kms`;
- moreInfoDiv.appendChild(diameterItem);
+ moreInfoList.appendChild(diameterItem);
 
  const climateItem = document.createElement('li');
  climateItem.textContent = `Climate: ${planet.climate}`;
- moreInfoDiv.appendChild(climateItem);
+ moreInfoList.appendChild(climateItem);
 
  const gravityItem = document.createElement('li');
  gravityItem.textContent = `Gravity: ${planet.gravity} G`;
- moreInfoDiv.appendChild(gravityItem);
+ moreInfoList.appendChild(gravityItem);
 
  const terrainItem = document.createElement('li');
  terrainItem.textContent = `Terrain: ${planet.terrain}`;
- moreInfoDiv.appendChild(terrainItem);
+ moreInfoList.appendChild(terrainItem);
 
  const surfaceWaterItem = document.createElement('li');
  surfaceWaterItem.textContent = `Surface Water: ${planet.surface_water} %`;
- moreInfoDiv.appendChild(surfaceWaterItem);
+ moreInfoList.appendChild(surfaceWaterItem);
 
  const populationItem = document.createElement('li');
  populationItem.textContent = `Population: ${planet.population}`;
- moreInfoDiv.appendChild(populationItem);
+ moreInfoList.appendChild(populationItem);
 
  return planetDiv;
 }
