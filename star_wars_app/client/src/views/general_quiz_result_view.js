@@ -14,35 +14,35 @@ GeneralQuizResultView.prototype.bindEvents = function(){
 
 GeneralQuizResultView.prototype.render = function(count){
   this.container.innerHTML = '';
-  const resultDiv = document.createElement('div')
+  const resultGeneralQuizDiv = document.createElement('div')
 
-  const header = document.createElement('h3');
-  header.className = "quiz-score"
+  const generalHeader = document.createElement('h3');
+  generalHeader.className = "general-quiz-score"
 
-  resultDiv.appendChild(header);
+  resultGeneralQuizDiv.appendChild(generalHeader);
 
   const resultImage = document.createElement('img');
     if (count === 0) {
-    header.id = "terrible-score";
-    header.textContent = `The force is not with you: you got ${count} out of 3`;
+    generalHeader.id = "bad-score";
+    generalHeader.textContent = `The force is not with you: you got ${count} out of 3`;
   }
     if (count === 1) {
-    header.id = "low-score";
-    header.textContent = `You are no Jedi: you got ${count} out of 3`;
+    generalHeader.id = "ok-score";
+    generalHeader.textContent = `You are no Jedi: you got ${count} out of 3`;
   }
     if (count === 2) {
-    header.id = "good-score";
-    header.textContent = `You will never turn to the dark side: you got ${count} out of 3`;
+    generalHeader.id = "better-score";
+    generalHeader.textContent = `You will never turn to the dark side: you got ${count} out of 3`;
   }
     if (count === 3) {
-    header.id = "perfect-score";
-    header.textContent = `You are the Chosen One: you got ${count} out of 3`;
+    generalHeader.id = "great-score";
+    generalHeader.textContent = `You are the Chosen One: you got ${count} out of 3`;
   }
   console.log('resultImage', resultImage);
   console.log('resultDiv', resultDiv);
-  resultDiv.appendChild(resultImage);
+  resultGeneralQuizDiv.appendChild(resultImage);
 
-  this.container.appendChild(resultDiv);
+  this.container.appendChild(resultGeneralQuizDiv);
 }
 
 module.exports = GeneralQuizResultView;
