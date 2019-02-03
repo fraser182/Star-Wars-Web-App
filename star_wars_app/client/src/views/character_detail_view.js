@@ -33,7 +33,7 @@ CharacterDetailView.prototype.createCharacterDetail = function(character){
 
   const moreInfoDiv = document.createElement('div');
   moreInfoDiv.id = moreInfoDivId // id struggles with whitespace
-  moreInfoDiv.classList.add('collapse');
+  moreInfoDiv.classList.add('collapse', 'more-info');
 
   characterDiv.appendChild(moreInfoDiv);
 
@@ -44,31 +44,31 @@ CharacterDetailView.prototype.createCharacterDetail = function(character){
 
   const birthYearItem = document.createElement('li');
   birthYearItem.textContent = `Birth Year: ${character.birth_year}`;
-  moreInfoDiv.appendChild(birthYearItem);
+  moreInfoList.appendChild(birthYearItem);
 
   const eyeColorItem = document.createElement('li');
   eyeColorItem.textContent = `Eye Colour: ${character.eye_color}`;
-  moreInfoDiv.appendChild(eyeColorItem);
+  moreInfoList.appendChild(eyeColorItem);
 
   const genderItem = document.createElement('li');
   genderItem.textContent = `Gender: ${character.gender}`;
-  moreInfoDiv.appendChild(genderItem);
+  moreInfoList.appendChild(genderItem);
 
   const hairColourItem = document.createElement('li');
   hairColourItem.textContent = `Hair Colour: ${character.hair_color}`;
-  moreInfoDiv.appendChild(hairColourItem);
+  moreInfoList.appendChild(hairColourItem);
 
   const heightItem = document.createElement('li');
   heightItem.textContent = `Height: ${character.height} cms`;
-  moreInfoDiv.appendChild(heightItem);
+  moreInfoList.appendChild(heightItem);
 
   const massItem = document.createElement('li');
   massItem.textContent = `Mass: ${character.mass} kgs`;
-  moreInfoDiv.appendChild(massItem);
+  moreInfoList.appendChild(massItem);
 
   const skinColourItem = document.createElement('li');
   skinColourItem.textContent = `Skin Colour: ${character.skin_color}`;
-  moreInfoDiv.appendChild(skinColourItem);
+  moreInfoList.appendChild(skinColourItem);
 
   return characterDiv;
 }

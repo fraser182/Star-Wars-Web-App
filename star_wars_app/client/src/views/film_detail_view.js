@@ -33,7 +33,7 @@ FilmDetailView.prototype.createFilmDetail = function(film){
 
   const moreInfoDiv = document.createElement('div');
   moreInfoDiv.id = moreInfoDivId // id struggles with whitespace
-  moreInfoDiv.classList.add('collapse');
+  moreInfoDiv.classList.add('collapse', 'more-info');
 
   filmDiv.appendChild(moreInfoDiv);
 
@@ -44,24 +44,24 @@ FilmDetailView.prototype.createFilmDetail = function(film){
 
   const episodeItem = document.createElement('li');
   episodeItem.textContent = `Episode: ${film.episode_id}`;
-  moreInfoDiv.appendChild(episodeItem);
+  moreInfoList.appendChild(episodeItem);
 
   const directorItem = document.createElement('li');
   directorItem.textContent = `Director: ${film.director}`;
-  moreInfoDiv.appendChild(directorItem);
+  moreInfoList.appendChild(directorItem);
 
   const producerItem = document.createElement('li');
   producerItem.textContent = `Producer(s): ${film.producer}`;
-  moreInfoDiv.appendChild(producerItem);
+  moreInfoList.appendChild(producerItem);
 
   const releaseDateItem = document.createElement('li');
   releaseDateItem.textContent = `Release Date: ${film.release_date}`;
-  moreInfoDiv.appendChild(releaseDateItem);
+  moreInfoList.appendChild(releaseDateItem);
 
 
   const openingCrawlItem = document.createElement('li');
   openingCrawlItem.textContent = `Opening Crawl: ${film.opening_crawl}`;
-  moreInfoDiv.appendChild(openingCrawlItem);
+  moreInfoList.appendChild(openingCrawlItem);
 
 
   return filmDiv;
