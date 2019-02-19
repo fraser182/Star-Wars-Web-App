@@ -63,7 +63,6 @@ $ npm install
 $ mongod
 $ npm run build
 $ npm run server:dev
-
 ```
 ## Run
 [LocalHost:3000](http://localhost:3000/)
